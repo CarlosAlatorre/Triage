@@ -1,7 +1,7 @@
 /**
  * Created by Toshiba on 28/12/2016.
  */
-argus
+triage
   .factory('alertService', ['$q', function ($q) {
 
     return{

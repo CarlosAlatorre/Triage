@@ -1,7 +1,7 @@
 /**
  * Created by Toshiba on 18/01/2017.
  */
-argus
+triage
   .constant('settings', {
     maestroPerfilUrl: 'pages.profile.profile-comentarios',
     firebaserUrl: 'https://argusseguridad-41e35.firebaseio.com/'

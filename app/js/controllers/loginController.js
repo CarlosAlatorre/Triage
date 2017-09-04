@@ -2,7 +2,7 @@
  * Created by Toshiba on 18/12/2016.
  */
 
-argus
+triage
   .controller('loginCtrl', ['$location', '$scope', '$rootScope', 'alertService', 'settings',
     function ($location, $scope, $rootScope, alertService, settings) {
 

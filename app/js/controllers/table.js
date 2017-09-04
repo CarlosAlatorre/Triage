@@ -1,4 +1,4 @@
-argus
+triage
     .controller('tableCtrl', function($filter, $sce, ngTableParams, tableService) {
         var data = tableService.data;
 

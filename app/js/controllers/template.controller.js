@@ -1,7 +1,7 @@
 /**
  * Created by Toshiba on 20/02/2017.
  */
-argus
+triage
   .controller('supervisorCtrl', ['$scope', '$rootScope', 'alertService', '$uibModal',
     function ($scope, $rootScope, alertService, $uibModal) {
 

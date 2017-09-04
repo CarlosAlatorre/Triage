@@ -1,4 +1,4 @@
-var argus = angular.module('argus', [
+var triage = angular.module('triage', [
   'ngAnimate',
   'ngResource',
   'ui.router',
@@ -11,7 +11,8 @@ var argus = angular.module('argus', [
   'angular-toArrayFilter',
   'angular-growl',
   'notification',
-  'ngMaterial'
+  'ngMaterial',
+  'angular-chrono'
   // 'ngSanitize',
   // 'ngCsv',
   // 'firebase'

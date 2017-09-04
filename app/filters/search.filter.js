@@ -1,4 +1,4 @@
-argus
+triage
   .filter('search', function() {
   return function(input, search) {
     if (!input) return input;

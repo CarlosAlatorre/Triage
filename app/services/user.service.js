@@ -1,4 +1,4 @@
-argus
+triage
   .factory('userService', ['$q', function ($q) {
 
     return{

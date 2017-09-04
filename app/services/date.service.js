@@ -1,4 +1,4 @@
-argus
+triage
   .factory('dateService', function () {
     var days = [];
     days[0] = 'Domingo';

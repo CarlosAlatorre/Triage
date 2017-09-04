@@ -1,4 +1,4 @@
-argus
+triage
 
     .controller('mainCtrl', function($timeout, $state, $scope, growlService){
         //Welcome Message

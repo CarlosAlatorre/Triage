@@ -1,4 +1,4 @@
-angular.module('argus').run(['$templateCache', function($templateCache) {
+angular.module('triage').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('template/chat.html'

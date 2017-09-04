@@ -1,7 +1,7 @@
 /**
  * Created by Legible on 5/12/2017.
  */
-argus
+triage
   .filter('formatoFecha', function() {
     return function(value) {
 

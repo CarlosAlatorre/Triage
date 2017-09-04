@@ -1,4 +1,4 @@
-argus
+triage
   .factory('objetService', function () {
 
 

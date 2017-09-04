@@ -1,7 +1,7 @@
 /**
  * Created by Toshiba on 20/01/2017.
  */
-argus
+triage
   .directive('myEnter', function () {
     return function (scope, element, attrs) {
       element.bind("keydown keypress", function (event) {

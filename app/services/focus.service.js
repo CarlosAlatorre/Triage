@@ -1,7 +1,7 @@
 /**
  * Created by Carlos Alatorre on 29/04/2017.
  */
-argus
+triage
   .factory('focusService', ['$q', function ($q) {
 
     return{

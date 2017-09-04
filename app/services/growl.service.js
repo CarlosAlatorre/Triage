@@ -1,7 +1,7 @@
 /**
  * Created by Toshiba on 21/02/2017.
  */
-argus
+triage
 
   .service('growlService', function () {
     var growlService = {};
