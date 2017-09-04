@@ -1,0 +1,107 @@
+<form name="pacienteForm" id="form" ng-submit="">
+
+
+  <!--Body-->
+  <div class="modal-body modal-size p-l-15 p-r-15">
+    <div class="row">
+
+    <div class="col-xs-4 r-p-l" style="background-color: #2ecc71" align="center">
+      
+      <div class="row r-p-title">
+        <h2 class="registrarPaciente-modal">Nuevo</h2>
+      </div>
+      <div class="row r-p-icon">
+        <span class="zmdi zmdi-plus zmdi-hc-3x" style="color: white"></span>
+      </div>
+
+    </div>
+
+    <div class="col-xs-8 r-p-r">
+      
+      <div class="row r-p-row">
+        <div class="col-xs-6">
+          <span>Nombres</span>
+            <div class="fg-line m-l-10">
+              <input type="text" name="clientName" class="form-control" required>
+            </div>
+        </div>
+        <div class="col-xs-6">
+          <span>Apellidos</span>
+            <div class="fg-line m-l-10">
+              <input type="text" name="clientName" class="form-control" required>
+            </div>
+        </div>
+      </div>
+      <div class="row r-p-row">
+        <div class="col-xs-6">
+          <span>Edad</span>
+            <div class="fg-line m-l-10">
+              <input type="number" name="clientName" class="form-control" required>
+            </div>
+        </div>
+        <div class="col-xs-6">
+          <span>Genero</span>
+          <div class="radio">
+            <label>
+              <input class="form-control" type="radio" value="M">
+              <i class="input-helper"></i>
+              Masculino
+            </label>
+          </div>
+
+          <div class="radio">
+            <label>
+              <input class="form-control" type="radio" value="F">
+              <i class="input-helper"></i>
+              Femenino
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="row r-p-row">
+        <div class="col-xs-6">
+          <span>Fecha de Nacimiento</span>
+            <div class="datepickerdemoBasicUsage">
+            <md-content class="size-datepicker">
+              <md-datepicker ng-model="vm.secondDate" md-placeholder="Introduzca fecha"></md-datepicker>
+            </md-content>
+          </div>
+        </div>
+        <div class="col-xs-6">
+          <span>Clave de seguro</span>
+            <div class="fg-line m-l-10">
+              <input type="text" name="clientName" class="form-control" required>
+            </div>
+        </div>
+      </div>
+      <div class="row r-p-row">
+        <div class="col-xs-6">
+          <span>Tipo de sangre</span>
+            <div class="fg-line m-l-10">
+              <select class="form-control"">
+                <option></option>
+              </select>
+            </div>
+        </div>
+        <div class="col-xs-6">
+          <span>Alergias</span>
+            <div class="fg-line m-l-10">
+              <input type="text" name="clientName" class="form-control" required>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+    </div>
+  </div>
+
+  <!--Footer-->
+  <div class="modal-footer r-p-footer">
+    <div align="right">
+      <div class="btn btn-sucess waves-effect">Aceptar</div>
+
+      <div class="btn btn-danger waves-effect" ng-click="">Cancelar</div>
+    </div>
+  </div>
+</form>
