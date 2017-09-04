@@ -1,0 +1,86 @@
+<header id="header" data-current-skin={{mactrl.currentSkin}} data-ng-include="'template/header.html'"
+        data-ng-controller="headerCtrl as hctrl">
+</header>
+
+<section id="main">
+
+  <div class="card m-l-20 m-r-20">
+
+    <div class="row p-t-20">
+      <div class="col-xs-offset-3 col-xs-1 p-r-0" align="right">
+        <i class="zmdi zmdi-search zmdi-hc-2x " style="padding-top: 8px;"></i>
+      </div>
+      <div class="col-xs-4 p-l-0">
+        <div class="fg-line m-l-10">
+          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar...">
+        </div>
+      </div>
+    </div>
+
+    <div class="row m-t-10 m-l-10 m-r-10">
+      <!--Cola de pacientes-->
+      <div class="col-xs-9">
+
+        <table class="table table-hover">
+
+          <thead>
+          <tr>
+            <th>Nombre del paciente</th>
+            <th>Clave de seguro</th>
+            <th>Sintomas</th>
+            <th>Tiempo</th>
+          </tr>
+          </thead>
+
+          <tbody>
+
+          <tr>
+
+            <td>Gabriel Rodriguez Mendez</td>
+            <td>130209656520</td>
+            <td>Tos</td>
+            <td>
+              <div class="timer">
+                <timer interval="1000" countdown="100">{{countdown}}</timer>
+              </div>
+            </td>
+
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+
+      <!--Registrar nuevo paciente o crear uno nuevo-->
+      <div class="col-xs-3">
+        <div align="center">
+          <h3 style="color: #6b6b6b;">Nuevo paciente</h3>
+        </div>
+
+        <div class="card" style="background-color: #3498db; height: 150px">
+          <div class="row">
+            <div class="col-xs-12" style="margin-top: 20px; padding-left: 35px; padding-right: 35px">
+              <span style="color: white; font-size: 13px">Clave de seguro</span>
+              <!--<div class="fg-line ">-->
+              <input type="text"
+                     class="form-control p-l-5 m-t-5"
+                     placeholder="Ejemplo: 13020203"
+                     required>
+              <!--</div>-->
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-offset-2 col-xs-8 m-t-15">
+              <button class="btn btn-danger" style="width: 100%; border-radius: 5px 5px 5px 5px; background-color: #e74c3c !important;" ng-click="vm.openRegisterPatient()">Registrar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
