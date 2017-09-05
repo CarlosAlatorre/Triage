@@ -1,0 +1,182 @@
+<form name="pacienteForm" id="form" ng-submit="">
+
+
+  <!--Header-->
+  <div class="modal-header r-s-header">
+
+    <ul class="tab-nav">
+
+      <li class="r-s-close-icon">
+        <span class="zmdi zmdi-close cursor-pointer" ng-click="vm.closeModalofRegisterSymptom()"></span>
+      </li>
+
+      <li class="{{vm.view == 'informacionBasica' ? 'active' : ''}}">
+        <a href="" ng-click="vm.view = 'informacionBasica'">
+          <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
+          Informacion basica
+        </a>
+      </li>
+
+      <li class="{{vm.view == 'sintomas' ? 'active' : ''}}">
+        <a href="" ng-click="vm.view = 'sintomas'">
+          <img class="r-s-s-icon" style="{{ vm.view == 'sintomas' ? '': 'color: #7a7a7a !important' }}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACbUlEQVRoQ+1Z7TEFQRDsFwEiQASIABEgAmRABIgAESACRIAIEAEiQARUV+1WjbndvY+d23unbn4979xt9/R83pth5DYbOX5MBIZWMKbACoBzAOsA+HlIewfwAuAYAD//sRABAn4GsDgk6sDZXwA2NIkQgTsAO3MG3sO5B7ArsYUIfM6h9z1mhtBqHYGfBmFWUqAknpACEwFjeSYFmnTrawD7wvNN7mkqVBEFdOVivWbzsbDeCbAu3yqk2wAeLdAD6J2ADh/iZtu/GAMBjhsMH21nAE7HQOAAwFUAaKXlZ5DpNYRic9MTgK0M0PLW3gjEwscfblVKeyNw5HaGmKNTBDiynwBgCCbn/T6rEHcGLjwxi5XS2L4RnPctCEiALJmHbkt7U8g/ACyL7zyBWKKHiIeSPzuE9EGeAEPAG5OWjUt+50vpQ4uErsz71gp4wJRbrpwhUpeumWmlUsWJKuod3FyBEIAllw/0tlSFHpVDXl1l7SWEWE1ScXzjrrPuSwIc5uhNrRRDjdcWFJtv5wT95iFbAV8OY2VzDwAbGk0fJjESoCdDYhw1qA7DhoT4/MprE4sckPVcD24SVB2BrvORmQLem/TWmvvDh4+/xvDYjAQ63yaEPFyXF+YEUgfGZiNNtA60vF6UAONa9gIPJGfBKUoglOivNSNHnRpFCehSSnBsckz+rlaUAIc7DnneWKVYMtm5u1pRArqUdi2dgyVxVy+n7iuugDWJiYDVbttVmdYKsGLoSbHr4db3VfaFf/kTE+t2aF639mbb5wX3hdTPrHy3ycYkF/W2h1r8f3JfGDpBswlOBLJdmPmA0SvwCxNSqDGUSGaRAAAAAElFTkSuQmCC">
+          Sintomas
+        </a>
+      </li>
+
+      <li class="{{vm.view == 'vistaPrevia' ? 'active' : ''}}">
+        <a href="" ng-click="vm.view = 'vistaPrevia'">
+          <img class="r-s-v-icon" style="{{ vm.view == 'vistaPrevia' ? '': 'color: #7a7a7a !important' }}" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC3klEQVRoQ+2Yj1FUMRDGv6sAqUCoAKlArUCpAKhArQCtQK1AqQCpAKxAqQCoAK1A54eJE3L5s3m5x83NZGfezIPbbPbb/XY3eQttuCw23H8NAOvO4MjAyEBnBAaFOgPYvXxkIAjhjqRXkp5J4v1FFN5LSTeSfko6d+9rz8ATSYeS3jqnWxwCzCdJp5J+tSwMdadSCMffOMd57xGcB8jnKUCmAMDx95J6HY9BAwS7ADFLCwB4/SXB7XgzKAHf4ToPQl3wUBdQriSsPbbWiBXAa+d8KeoUJrUAt0tCIKAMBZ8TsgGIb7VUWAB8dI6VbLHZ19pm0e9HLiilZQB9V1KoAYAybLRq5709CwgCQ4CSkgMAVS4cb0vOQxvo1SPQpEQnbFMXB6kulQJgdR7DuxnOA4pu5YcZDnxwjsRgqYlrQwRoCC9jECkAFtqwH90mRa/SekDQKmOBJrXuxJolOsUArM5jLFW4RP6sEk2iSEZCsdSC138AIgTQYgRj+0Gf98Zx7HkFwPfELGFG/DDQyKv8D14I4K5xuqbo98foRM9atmBObPMSGuKfW0YH4rV+2WMB+O2DvQ4KpVrvSijkq9zSDdClL8ej/jGK+EH3S3HR2tJybZQ2eZKhYm8bXdozN8joJnuGesgNMgYYQHxHovPwd9w+2cI6yK5SJ4PSUcICAgpBpR5hbtSOIwQAnaWbW+0wZ6HTlJOoB2yZPTmq3tuoAUCHIy3nmpJMAWFxntsZd4ysWACwmPSRjdKcgE6c3S0XGu4YJdrQ5wG4kguNR0+xAaJ2VECH+qHowislTYHirt0v4Ds6tUCYKRSnj5TSUVqmtqXIiTp2oaxZrBSKDXJnAAhPLxAcx2me5u9DUwF4QAAh3QB5ag7bP8Vb5zSUa3bc79ULIPSZGqEw/afFuFbgtv+0SHGaOF4LyioB1Paa5fcBYJawNhgdGWgI1iyqIwOzhLXB6MhAQ7BmUd34DPwFmn+PMQdvLz8AAAAASUVORK5CYII=">
+          Vista previa
+        </a>
+      </li>
+
+      <li class="r-s-boton-siguiente">
+        <a href="" ng-click="vm.nextInModalOfRegisterSymptom()" class="r-s-b-siguiente">Siguiente</a>
+      </li>
+
+    </ul>
+
+  </div>
+
+
+  <!--Body-->
+  <div class="modal-body modal-size p-l-15 p-r-15">
+
+    <div class="row">
+
+      <!--Informacion basica-->
+      <div ng-if="vm.view == 'informacionBasica'">
+
+        <div class="col-xs-3">
+
+          <div class="r-s-foto">
+            <img src="img/img-profile-M.png" alt="" class="r-s-fotoPatient">
+          </div>
+
+        </div>
+
+        <div class="col-xs-9">
+
+          <div class="row r-s-filas-formulario">
+            <div class="col-xs-6">
+
+              <span>Nombres</span>
+              <div class="fg-line m-l-10">
+                <input type="text" class="form-control" required autofocus>
+              </div>
+
+            </div>
+
+            <div class="col-xs-6">
+
+              <span>Apellidos</span>
+              <div class="fg-line m-l-10">
+                <input type="text" class="form-control" required>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row r-s-filas-formulario">
+            <div class="col-xs-6">
+
+              <span>Edad</span>
+              <div class="fg-line m-l-10">
+                <input type="number" class="form-control" required>
+              </div>
+
+            </div>
+
+            <div class="col-xs-6">
+
+              <span>Genero</span>
+
+              <div class="row">
+
+                <div class="col-xs-6">
+                  <div class="radio">
+                    <label>
+                      <input class="form-control" type="radio" name="genero" value="M">
+                      <i class="input-helper"></i>
+                      Masculino
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col-xs-6">
+                  <div class="radio">
+                    <label>
+                      <input class="form-control" type="radio" name="genero" value="F">
+                      <i class="input-helper"></i>
+                      Femenino
+                    </label>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row r-s-filas-formulario">
+            <div class="col-xs-6">
+
+              <span>Fecha Nacimiento</span>
+              <div class="fg-line m-l-10">
+                <input type="date" class="form-control" required>
+              </div>
+
+            </div>
+
+            <div class="col-xs-6">
+
+              <span>Clave del seguro</span>
+              <div class="fg-line m-l-10">
+                <input type="text" class="form-control" required>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row r-s-filas-formulario">
+            <div class="col-xs-6">
+
+              <span>Tipo de sangre</span>
+              <div class="fg-line m-l-10">
+                <input type="text" class="form-control" required>
+              </div>
+
+            </div>
+
+            <div class="col-xs-6">
+
+              <span>Alergias</span>
+              <div class="fg-line m-l-10">
+                <input type="text" class="form-control" required>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Registrar sintomas-->
+      <div ng-if="vm.view == 'sintomas'">
+
+
+      </div>
+
+      <!--Vista previa-->
+      <div ng-if="vm.view == 'vistaPrevia'">
+
+
+      </div>
+
+    </div>
+
+  </div>
+</form>
+
