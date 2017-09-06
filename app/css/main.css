@@ -6,6 +6,5852 @@
   margin-right: 15px;
 }
 
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.r-s-s-n{
+  border-radius: 25px 25px 25px 25px;
+  background-color: #e67e22;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.r-s-s-v{
+  border-radius: 25px 25px 25px 25px;
+  background-color: #2ecc71;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.table-sintomas{
+}
+
+.r-s-s-r{
+  border-radius: 25px 25px 25px 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.r-s-trash-icon{
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+}
+
+.r-s-rows{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.r-s-a-s{
+  display: inline;
+  padding-left: 7px;
+  padding-right: -6px;
+  padding-top: 2px;
+}
+
+.r-s-a-s-r{
+  display: inline;
+  padding-left: 10px;
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 5px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.r-s-s-icon{
+  height: 20;
+  width: 20px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+}
+
+.r-s-i-icon{
+  height: 20px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.r-s-v-icon{
+  height: 20px;
+  width: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 5px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.r-s-s-icon{
+  height: 20;
+  width: 20px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+}
+
+.r-s-i-icon{
+  height: 20px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.r-s-v-icon{
+  height: 20px;
+  width: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.action-edit{
+  padding-top: 10px;
+}
+.modal-size{
+  height: 400px;
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.modal-lm{
+  width: 700px;
+}
+
+.modal-li{
+  width: 400px;
+}
+
+.modal-sn{
+  width: 300px;
+}
+
+.modal-xxm{
+  width: 210px;
+}
+
+.modal-c{
+  width: 300px;
+}
+
+.modal-ar{
+  width: 350px;
+}
+
+.modal-incidentes{
+  width: 800px !important;
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+}
+
+.notification-icon:hover{
+  color: white !important;
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+}
+
+.notification-text{
+  font-size: 18px;
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+}
+
+.m-t-25{
+  margin-top: 25px;
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+}
+
+.f-25{
+  font-size: 25px;
+}
+
+.f-15{
+  font-size: 15px;
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+}
+
+.text-info-guardia{
+  font-size: 15px;
+}
+
+.modal-size-users{
+  height: 420px;
+}
+
+.registrarPaciente-modal{
+  color: white;
+}
+
+.r-p-title{
+  margin-top: 125px;
+}
+
+.r-p-icon{
+  margin-top: 10px;
+}
+
+.r-p-r{
+}
+
+.r-p-l{
+  height: 446px;
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+}
+
+.r-s-b-siguiente{
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+}
+
+.r-s-s-r{
+}
+
+.r-s-s-n{
+}
+
+.r-s-s-v{
+}
+
+.table-sintomas{
+}
+
+.r-s-s-r{
+  border-radius: 25px 25px 25px 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.r-s-trash-icon{
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+}
+
+.r-s-rows{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 25px;
+}
+
+.r-s-a-s{
+  display: inline;
+  padding-left: 5px;
+  padding-right: 4px;
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+
+}
+
+.action-edit{
+  padding-top: 10px;
+
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+
+}
+
+.modal-size{
+  height: 400px;
+
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+
+}
+
+.modal-lm{
+  width: 700px;
+
+}
+
+.modal-li{
+  width: 400px;
+
+}
+
+.modal-sn{
+  width: 300px;
+
+}
+
+.modal-xxm{
+  width: 210px;
+
+}
+
+.modal-c{
+  width: 300px;
+
+}
+
+.modal-ar{
+  width: 350px;
+
+}
+
+.modal-incidentes{
+  width: 800px !important;
+
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+
+}
+
+.notification-icon:hover{
+  color: white !important;
+
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+
+}
+
+.notification-text{
+  font-size: 18px;
+
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.m-t-25{
+  margin-top: 25px;
+
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+
+}
+
+.f-25{
+  font-size: 25px;
+
+}
+
+.f-15{
+  font-size: 15px;
+
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.text-info-guardia{
+  font-size: 15px;
+
+}
+
+.modal-size-users{
+  height: 420px;
+
+}
+
+.registrarPaciente-modal{
+  color: white;
+
+}
+
+.r-p-title{
+  margin-top: 125px;
+
+}
+
+.r-p-icon{
+  margin-top: 10px;
+
+}
+
+.r-p-r{
+
+}
+
+.r-p-l{
+  height: 446px;
+
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+
+}
+
+.r-s-b-siguiente{
+
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.r-s-s-r{
+
+}
+
+.r-s-s-n{
+
+}
+
+.r-s-s-v{
+
+}
+
+.table-sintomas{
+
+}
+
+.r-s-s-r{
+  border-radius: 25px 25px 25px 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+}
+
+.r-s-trash-icon{
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+
+}
+
+.r-s-rows{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 25px
+
+}
+
+.r-s-a-s{
+  display: inline;
+  padding-left: 5px;
+  padding-right: 4px;;
+
+}
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+
+}
+
+.modal-size{
+  height: 400px;
+
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+
+}
+
+.modal-lm{
+  width: 700px;
+
+}
+
+.modal-li{
+  width: 400px;
+
+}
+
+.modal-sn{
+  width: 300px;
+
+}
+
+.modal-xxm{
+  width: 210px;
+
+}
+
+.modal-c{
+  width: 300px;
+
+}
+
+.modal-ar{
+  width: 350px;
+
+}
+
+.modal-incidentes{
+  width: 800px !important;
+
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+
+}
+
+.notification-icon:hover{
+  color: white !important;
+
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+
+}
+
+.notification-text{
+  font-size: 18px;
+
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.m-t-25{
+  margin-top: 25px;
+
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+
+}
+
+.f-25{
+  font-size: 25px;
+
+}
+
+.f-15{
+  font-size: 15px;
+
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.text-info-guardia{
+  font-size: 15px;
+
+}
+
+.modal-size-users{
+  height: 420px;
+
+}
+
+.registrarPaciente-modal{
+  color: white;
+
+}
+
+.r-p-title{
+  margin-top: 125px;
+
+}
+
+.r-p-icon{
+  margin-top: 10px;
+
+}
+
+.r-p-r{
+
+}
+
+.r-p-l{
+  height: 446px;
+
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+
+}
+
+.action-edit{
+  padding-top: 10px;
+
+}
+.actions-supervisor{
+  padding-left: 20px;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+
+}
+
+.action-edit{
+  padding-top: 10px;
+
+}
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+
+}
+
+.modal-size{
+  height: 400px;
+
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+
+}
+
+.modal-lm{
+  width: 700px;
+
+}
+
+.modal-li{
+  width: 400px;
+
+}
+
+.modal-sn{
+  width: 300px;
+
+}
+
+.modal-xxm{
+  width: 210px;
+
+}
+
+.modal-c{
+  width: 300px;
+
+}
+
+.modal-ar{
+  width: 350px;
+
+}
+
+.modal-incidentes{
+  width: 800px !important;
+
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+
+}
+
+.notification-icon:hover{
+  color: white !important;
+
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+
+}
+
+.notification-text{
+  font-size: 18px;
+
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.m-t-25{
+  margin-top: 25px;
+
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+
+}
+
+.f-25{
+  font-size: 25px;
+
+}
+
+.f-15{
+  font-size: 15px;
+
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.text-info-guardia{
+  font-size: 15px;
+
+}
+
+.modal-size-users{
+  height: 420px;
+
+}
+
+.registrarPaciente-modal{
+  color: white;
+
+}
+
+.r-p-title{
+  margin-top: 125px;
+
+}
+
+.r-p-icon{
+  margin-top: 10px;
+
+}
+
+.r-p-r{
+
+}
+
+.r-p-l{
+  height: 446px;
+
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 3px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+
+}
+
+.r-s-boton-siguiente{
+  margin-left: 144px;
+  background-color: #3498db;
+
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+
+}
+
+.r-s-b-siguiente{
+  color: white !important;
+
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.actions-supervisor{
+  padding-left: 20px;
+
+}
+
+.cursor-pointer{
+  cursor: pointer;
+
+}
+
+.action-edit{
+  padding-top: 10px;
+
+}
+.modal-size{
+  height: 400px;
+
+}
+
+.table-box{
+  box-shadow: 0px 0px 5px #BDC3C7;
+
+}
+
+.table-guardias{
+  height: 270px;
+  overflow-y: auto;
+  overflow-x: auto;
+
+}
+
+.modal-lm{
+  width: 700px;
+
+}
+
+.modal-li{
+  width: 400px;
+
+}
+
+.modal-sn{
+  width: 300px;
+
+}
+
+.modal-xxm{
+  width: 210px;
+
+}
+
+.modal-c{
+  width: 300px;
+
+}
+
+.modal-ar{
+  width: 350px;
+
+}
+
+.modal-incidentes{
+  width: 800px !important;
+
+}
+
+.select-account{
+  min-width: 100%;
+  padding: 6px 12px;
+  margin-top: 5px;
+  webkit-appearance: normal !important;
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+}
+
+.select-account:not(.fc-alt){
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+
+}
+
+.radio-search{
+  width: 115px;
+  display: inline;
+  margin-right: 10px;
+
+}
+
+.loader-position{
+  position: absolute;
+  right: 45%;
+  z-index: 1000;
+
+}
+
+.notification-icon{
+  color: white !important;
+  font-size: 26px !important;
+
+}
+
+.notification-icon:hover{
+  color: white !important;
+
+}
+
+.notification-card{
+  width: 350px;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden;
+  max-height: 80vh;
+  right: 40px !important;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.notification-list{
+  box-shadow: inset 0 -0.5px 0 0 #bdc3c7;
+  font-size: 12px;
+
+}
+
+.notification-list:hover{
+  background-color: #ecf0f1;
+
+}
+
+.notification-text{
+  font-size: 18px;
+
+}
+
+.see-all-notificaction-text{
+  color: #3498db;
+  font-weight: 500;
+  font-size: 14px;
+
+}
+
+.notification-length{
+  font-weight: 500;
+  color: white;
+  position: absolute;
+  bottom: 16px;
+  left: 21px;
+  border-radius: 250px;
+  background-color: #e74c3c;
+  width: 16px;
+  height: 16px;
+  font-size: 11px;
+
+}
+
+.actions > li > a:hover:before, .actions > a:hover:before, .actions > li > a.open:before, .actions > a.open:before{
+  opacity: 0 !important;
+
+}
+
+.actions > li.open > a:before, .actions.open > a:before{
+  opacity: 0 !important;
+
+}
+
+.size-datepicker .md-datepicker-input-container .md-datepicker-input{
+  width: 130px;
+  padding-left: 5px;
+
+}
+
+.a-datepicker{
+  padding-top: 8px;
+  font-size: 14px;
+
+}
+
+.bitacora-align-middle{
+  vertical-align: middle !important;
+
+}
+
+.notification-icon-modal{
+  color: white;
+  padding-top: 75%;
+
+}
+
+.cardRegistrarConsigna{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsigna:hover{
+  height: 350px;
+  max-height: 350px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsigna{
+  margin-top: 40%;
+
+}
+
+.color-consigna-text{
+  color: #f6f5f5;
+
+}
+
+.color-consigna-text-hover{
+  color: #d2d0d0;
+
+}
+
+.consigna{
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: 196px;
+  margin-top: 6px;
+
+}
+
+.consignaModal{
+  position: relative;
+  min-height: 1px;
+  padding-left: 5px;
+  float: left;
+  width: 300px;
+  margin-top: 6px;
+
+}
+
+.scroll-consigna{
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 389px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar{
+  height: 10px;
+  width: 5px;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-consigna::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.scroll-tareas{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 389px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar{
+  width: 2px;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-track{
+  background: #ddd;
+
+}
+
+.scroll-tareas::-webkit-scrollbar-thumb{
+  background: #afadad;
+
+}
+
+.m-t-25{
+  margin-top: 25px;
+
+}
+
+.consigna-small{
+  height: 75px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+  padding-top: 10%;
+
+}
+
+.consigna-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.responsible-small{
+  height: 157px;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px 3px 3px 3px;
+
+}
+
+.responsible-small:hover{
+  background-color: rgba(213,213,213,0.53);
+
+}
+
+.title-consignaSmall{
+  font-size: 20px;
+  font-weight: 400;
+
+}
+
+.cardRegistrarConsignaSmall{
+  height: 75px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardRegistrarConsignaSmall:hover{
+  height: 75px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible{
+  height: 157px;
+  border-style: dashed;
+  border-color: #d2d0d0;
+  background-color: #f6f5f5;
+  box-shadow: 0px 0px 3px #f6f5f5;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.cardAddResponsible:hover{
+  height: 157px;
+  border-style: dashed;
+  border-color: #f6f5f5;
+  background-color: #d2d0d0;
+  box-shadow: 0px 0px 3px #2B2B2B;
+  border-radius: 3px;
+  border-width: 4px;
+
+}
+
+.title-registerConsignaSmall{
+  font-size: 20px;
+
+}
+
+.f-25{
+  font-size: 25px;
+
+}
+
+.f-15{
+  font-size: 15px;
+
+}
+
+.card-info-guardias{
+  height: 300px;
+  background-color: #5bc0de;
+  color: white;
+  border-radius: 5px 5px 5px 5px;
+  -moz-border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border: 0px solid #000000;
+
+}
+
+.text-info-guardia{
+  font-size: 15px;
+
+}
+
+.modal-size-users{
+  height: 420px;
+
+}
+
+.registrarPaciente-modal{
+  color: white;
+
+}
+
+.r-p-title{
+  margin-top: 125px;
+
+}
+
+.r-p-icon{
+  margin-top: 10px;
+
+}
+
+.r-p-r{
+
+}
+
+.r-p-l{
+  height: 446px;
+
+}
+
+.r-p-row{
+  margin-top: 35px;
+  margin-left: 0px;
+  margin-right: 10px;
+
+}
+
+.r-p-footer{
+  padding-bottom: 0px;
+  margin-top: -15px;
+
+}
+
+.r-s-close-icon{
+  margin-right: 30px;
+  padding-top: 5px;
+  color: #e74c3c;
+  font-size: 28px !important;
+  cursor: pointer;
+
+}
+
+.r-s-boton-siguiente{
+  margin-left: 60px;
+  background-color: #3498db;
+
+}
+
+.r-s-foto{
+  margin-top: 90px;
+  margin-left: 8px;
+
+}
+
+.r-s-fotoPatient{
+  width: 140px;
+
+}
+
+.r-s-filas-formulario{
+  margin-top: 35px;
+  margin-right: 16px;
+
+}
+
+.r-s-b-siguiente{
+
+}
+
+.r-s-header{
+  padding-top: 0px !important;
+  padding-right: 0px !important;
+
+}
+
+.r-s-s-icon{
+  height: 20;
+  width: 20px;
+  padding-bottom: 3px;
+  margin-right: 5px;
+
+}
+
+.r-s-i-icon{
+  height: 20px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+
+}
+
+.r-s-v-icon{
+  height: 20px;
+  width: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 3px;
+  margin-right: 5px;
+
+}
+
+.supervisor-search{
+  width: 200px;
+  margin-left: 10px !important;
+  margin-right: 15px;
+
+}
+
+.action-delete{
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+}
+
+.not-found{
+  font-size: 30px;
+  color: #bdc3c7;
+
+}
+
+.not-found-quote{
+  font-size: 100px;
+  color: #bdc3c7;
+
+}
+
 
 
 
@@ -2571,7 +8417,7 @@
 }
 
 .r-s-boton-siguiente{
-  margin-left: 75px;
+  margin-left: 60px;
   background-color: #3498db;
 
 }
@@ -2611,14 +8457,53 @@
   margin-right: 15px;
 
 }
+.table-sintomas{
 
+}
+.r-s-s-r {
+  border-radius: 25px 25px 25px 25px;
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.r-s-trash-icon{
+  color: white;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 2px;
+}
+.r-s-rows{
+  margin-left: 10px;
+  margin-right: 10px;
 
-
-
+}
+.r-s-a-s{
+    display: inline;
+    padding-left: 7px;
+    padding-right: -6px;
+    padding-top: 2px;
+}
 
 .supervisor-search{
   width: 200px;
   margin-left: 10px !important;
   margin-right: 15px;
 
+}
+
+.r-s-a-s-r{
+      display: inline;
+      padding-left: 10px;
+}
+.r-s-columnas{
+      padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+}
+.r-s-necesita-rows{
+  margin-bottom: 0px !important;
 }

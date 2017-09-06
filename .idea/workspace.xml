@@ -4,16 +4,11 @@
     <bookmark url="file://$PROJECT_DIR$/app/template/header.html" line="18" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7f4ae1f1-b0de-4894-a4d9-423677ee78ea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html" />
+    <list default="true" id="7f4ae1f1-b0de-4894-a4d9-423677ee78ea" name="Default" comment="- Se añadio la interfaz de datos basicos del modal &quot;Registrar sintomas&quot;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/app.css" afterPath="$PROJECT_DIR$/app/css/app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/css/main.css" afterPath="$PROJECT_DIR$/app/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/index.html" afterPath="$PROJECT_DIR$/app/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js" afterPath="$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/colaPacientes.html" afterPath="$PROJECT_DIR$/app/views/colaPacientes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/modals/registrarPaciente.modal.html" afterPath="$PROJECT_DIR$/app/views/modals/registrarPaciente.modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html" afterPath="$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,8 +32,8 @@
       <file leaf-file-name="registrarSintomas.modal.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="346">
+              <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#src#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -46,7 +41,24 @@
                 <element signature="n#src#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
                 <element signature="n#src#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#form#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="711">
+              <caret line="8507" column="32" lean-forward="false" selection-start-line="8507" selection-start-column="32" selection-end-line="8507" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,18 +66,8 @@
       <file leaf-file-name="colaPacientes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/colaPacientes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="colaPacientes.controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1302">
-              <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state relative-caret-position="1071">
+              <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -177,11 +179,11 @@
         <option value="$PROJECT_DIR$/app/js/app.js" />
         <option value="$PROJECT_DIR$/app/css/app.css" />
         <option value="$PROJECT_DIR$/app/views/modals/registrarPaciente.modal.html" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/views/colaPacientes.html" />
         <option value="$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js" />
-        <option value="$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html" />
+        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/css/main.css" />
+        <option value="$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html" />
       </list>
     </option>
   </component>
@@ -259,7 +261,7 @@
     <option name="height" value="420" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -272,39 +274,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Triage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Triage" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Triage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Triage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Triage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Triage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Triage" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Triage" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="modals" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -558,7 +528,10 @@
       <workItem from="1504059349112" duration="2845000" />
       <workItem from="1504118071951" duration="10031000" />
       <workItem from="1504519396041" duration="1275000" />
-      <workItem from="1504636107135" duration="9903000" />
+      <workItem from="1504636107135" duration="9938000" />
+      <workItem from="1504718405311" duration="12000" />
+      <workItem from="1504720014795" duration="4841000" />
+      <workItem from="1504725542251" duration="4435000" />
     </task>
     <task id="LOCAL-00001" summary="cambios generales&#10;">
       <created>1489812407890</created>
@@ -756,11 +729,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503098524480</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="- Se añadio la interfaz de datos basicos del modal &quot;Registrar sintomas&quot;">
+      <created>1504651711668</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1504651711668</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1028783000" />
+    <option name="totallyTimeSpent" value="1038106000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1137,66 +1117,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/css/app.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="845">
-          <caret line="16329" column="1" lean-forward="true" selection-start-line="16329" selection-start-column="1" selection-end-line="16329" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/modals/registrarPaciente.modal.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="42" column="12" lean-forward="false" selection-start-line="42" selection-start-column="12" selection-end-line="66" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/modals/clientes.modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="39" column="12" lean-forward="true" selection-start-line="39" selection-start-column="12" selection-end-line="44" selection-end-column="18" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="143" column="64" lean-forward="true" selection-start-line="143" selection-start-column="64" selection-end-line="143" selection-end-column="64" />
+        <state relative-caret-position="441">
+          <caret line="30" column="83" lean-forward="false" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/css/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16320" column="2" lean-forward="false" selection-start-line="16320" selection-start-column="2" selection-end-line="16328" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/colaPacientes.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="82" column="0" lean-forward="true" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="1071">
+          <caret line="51" column="7" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/js/controllers/colaPacientes.controller.js">
+    <entry file="file://$PROJECT_DIR$/app/views/modals/registrarPaciente.modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1302">
-          <caret line="62" column="0" lean-forward="true" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+        <state relative-caret-position="336">
+          <caret line="52" column="26" lean-forward="true" selection-start-line="52" selection-start-column="26" selection-end-line="52" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2557" column="0" lean-forward="true" selection-start-line="2557" selection-start-column="0" selection-end-line="2557" selection-end-column="0" />
+        <state relative-caret-position="711">
+          <caret line="8507" column="32" lean-forward="false" selection-start-line="8507" selection-start-column="32" selection-end-line="8507" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/modals/registrarSintomas.modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="22" lean-forward="true" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="346">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#src#0;n#img#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
@@ -1204,6 +1181,13 @@
             <element signature="n#src#0;n#img#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
             <element signature="n#src#0;n#img#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#form#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#src#0;n#img#0;n#div#1;n#div#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#1;n#div#0;n#div#1;n#form#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
