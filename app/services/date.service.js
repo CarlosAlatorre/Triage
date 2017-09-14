@@ -60,7 +60,7 @@ triage
         return letterOfDay[dt.getUTCDay()];
       },
 
-      getDateFormatWithDiagonals: function (date) {
+      getDateFormatWithDiagonalsOfDateNumbes: function (date) {
         return date.substr(0, 4) + '/' + date.substr(4, 2) + '/' + date.substr(6, 2);
       },
 
@@ -69,6 +69,13 @@ triage
         var day = ("0" + (date.getUTCDate())).slice(-2);
         var year = date.getUTCFullYear();
         return (year + '' + month + '' + day);
+      },
+
+      getDateFormatWithDiagonals: function (date) {
+        var month = ("0" + (date.getMonth() + 1)).slice(-2);
+        var day = ("0" + (date.getUTCDate())).slice(-2);
+        var year = date.getUTCFullYear();
+        return (day + '/' + month + '/' + year);
       }
 
 

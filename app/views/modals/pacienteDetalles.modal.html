@@ -1,0 +1,209 @@
+<form name="pacienteForm" id="form" ng-submit="">
+
+  <!--Body-->
+  <div class="modal-body modal-size p-l-15 p-r-15">
+    <div class="row">
+
+      <!--Informaciòn basica-->
+      <div class="col-xs-4 d-p-detallesIzquierda">
+
+        <!--Foto del paciente-->
+        <div class="row" align="center">
+          <img src="../../img/user.png" alt="" class="d-p-foto">
+        </div>
+
+        <!--Nombre del paciente-->
+        <div class="row">
+          <div class="col-xs-12" align="center">
+            <p class="d-p-nombre">Jorge Meneces Lopez</p>
+          </div>
+        </div>
+
+        <!--Edad del paciente-->
+        <div class="row">
+          <div class="col-xs-12" align="center">
+            <p class="d-t-edad">22 años</p>
+          </div>
+        </div>
+
+        <!--Informacion basica del paciente-->
+
+        <!--Genero-->
+        <div class="row d-p-informacion">
+          <div class="col-xs-5">
+            Genero:
+          </div>
+
+          <div class="col-xs-7">
+            Masculino
+          </div>
+        </div>
+
+        <!--Fecha de nacimiento-->
+        <div class="row d-p-informacion">
+
+          <div class="col-xs-5">
+            Fecha Nacimiento
+          </div>
+
+          <div class="col-xs-7">
+            26 / 08 / 1990
+          </div>
+
+        </div>
+
+        <!--Clave de seguro-->
+        <div class="row d-p-informacion">
+
+          <div class="col-xs-5">
+            Clave de seguro
+          </div>
+
+          <div class="col-xs-7">
+            121361684
+          </div>
+
+        </div>
+
+        <!--Tipo de sangre-->
+        <div class="row d-p-informacion">
+
+          <div class="col-xs-5">
+            Tipo de sangre
+          </div>
+
+          <div class="col-xs-7">
+            A+
+          </div>
+
+        </div>
+
+        <!--Alergias-->
+        <div class="row d-p-informacion">
+
+          <div class="col-xs-5">
+            Alergias
+          </div>
+
+          <div class="col-xs-7">
+            Ninguna
+          </div>
+
+        </div>
+
+      </div>
+
+      <!--Sintomas del paciente-->
+      <div class="col-xs-8 d-p-detallesDerecha">
+
+        <!--Requerimientos-->
+        <div class="row d-p-row-requerimientos">
+
+          <div class="col-xs-10" align="center">
+            Requiere: <span class="d-p-requerimientos">Cirugia</span>
+          </div>
+
+          <div class="col-xs-2" align="center">
+            <i class="zmdi zmdi-close zmdi-hc-2x d-p-close-icon cursor-pointer"></i>
+          </div>
+
+        </div>
+
+        <!--Informacion de los sintomas-->
+        <div class="row d-p-detallesPaciente">
+
+          <!--Informacion de pulso etc-->
+          <div class="col-xs-6">
+
+            <!--Pulso-->
+            <div class="row d-p-rows-r">
+              <span>Pulso</span>
+              <div class="fg-line m-l-10">
+                <input type="text" name="clientName" class="form-control" required>
+              </div>
+            </div>
+
+            <!--Presion Sintolica-->
+            <div class="row d-p-rows-r">
+              <span>Presion arterial Sintolica</span>
+              <div class="fg-line m-l-10">
+                <input type="text" name="clientName" class="form-control" required>
+              </div>
+            </div>
+
+            <!--Presion Diastolica-->
+            <div class="row d-p-rows-r">
+              <span>Presion arterial Diastolica</span>
+              <div class="fg-line m-l-10">
+                <input type="text" name="clientName" class="form-control" required>
+              </div>
+            </div>
+
+            <!--Temperatura-->
+            <div class="row d-p-rows-r">
+              <span>Temperatura</span>
+              <div class="fg-line m-l-10">
+                <input type="text" name="clientName" class="form-control" required>
+              </div>
+            </div>
+
+            <!--spO2-->
+            <div class="row d-p-rows-r">
+              <span>spO2</span>
+              <div class="fg-line m-l-10">
+                <input type="text" name="clientName" class="form-control" required>
+              </div>
+            </div>
+
+          </div>
+
+          <!--Detalles de sintomas-->
+          <div class="col-xs-6">
+
+            <!--Lista de sintomas-->
+            <div class="row d-p-sintomas">
+
+              <span style="margin-bottom: 5px">Sintomas</span>
+              <table class="table table-hover m-t-10">
+
+                <tbody>
+
+                <tr>
+                  <td>Tos</td>
+                </tr>
+
+                <tr>
+                  <td>Tos</td>
+                </tr>
+
+                <tr>
+                  <td>Tos</td>
+                </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+
+            <!--Observaciones-->
+            <div class="row d-p-observaciones">
+
+              <div class="col-xs-12 m-t-5">
+                <span>Observaciones</span>
+                <div class="fg-line">
+                  <textarea name="observaciones" id="" cols="30" rows="7" class="form-control p-t-5" placeholder="Escribe aqui..."></textarea>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</form>

@@ -13,11 +13,11 @@ triage
       //public functions
       vm.openRegisterPatient = openRegisterPatient;
       vm.openRegisterSymptom = openRegisterSymptom;
-      vm.registerPatient = registerPatient;
+      vm.openPatientDetails = openPatientDetails;
       vm.closeModalOfRegisterPatient = closeModalOfRegisterPatient;
       vm.closeModalofRegisterSymptom = closeModalofRegisterSymptom;
       vm.nextInModalOfRegisterSymptom = nextInModalOfRegisterSymptom;
-
+      vm.closeModalPatientDetails = closeModalPatientDetails;
 
       //private functions
       function activate() {
@@ -32,6 +32,7 @@ triage
           animation: true,
           templateUrl: 'views/modals/registrarPaciente.modal.html',
           scope: $scope,
+          controller: "registrarPacienteCtrl as vm",
           size: 'lm',
           backdrop: 'static'
         });
@@ -47,9 +48,14 @@ triage
         });
       }
 
-      function registerPatient(patient) {
-
-        vm.modalRegisterPatient.dismiss();
+      function openPatientDetails() {
+        vm.modalPatientDetails = $uibModal.open({
+          animation: true,
+          templateUrl: 'views/modals/pacienteDetalles.modal.html',
+          scope: $scope,
+          size: 'lm',
+          backdrop: 'static'
+        });
       }
 
       function closeModalOfRegisterPatient() {
@@ -58,9 +64,15 @@ triage
 
       }
 
+      function closeModalPatientDetails() {
+
+        vm.modalPatientDetails.dismiss();
+
+      }
+
       function closeModalofRegisterSymptom() {
 
-
++
         vm.modalRegisterSymptom.dismiss();
       }
 

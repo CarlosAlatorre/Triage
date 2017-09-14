@@ -8507,3 +8507,71 @@
 .r-s-necesita-rows{
   margin-bottom: 0px !important;
 }
+
+.d-p-foto{
+  width: 90px;
+  margin-top: 15px;
+}
+
+.d-p-nombre{
+  margin-bottom: 0px;
+  margin-top: 6px;
+}
+
+.d-t-edad{
+
+}
+
+.d-p-informacion{
+  margin-bottom: 18px;
+  padding-left: 10px;
+}
+
+.d-p-row-requerimientos{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.d-p-detallesPaciente{
+
+}
+
+.d-p-requerimientos{
+  background-color: #e74c3c;
+  color: white;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+
+.d-p-rows-r{
+  margin-bottom: 13px;
+  margin-left: 8px;
+  margin-right: 10px;
+}
+
+.d-p-sintomas{
+  margin-top: 10px;
+  overflow-y: auto;
+  margin-right: 10px;
+}
+
+.d-p-observaciones{
+  margin-right: 10px;
+}
+
+.d-p-close-icon{
+  color: #e74c3c;
+  font-weight: 500;
+  margin-left: 8px;
+}
+
+.d-p-detallesIzquierda{
+  background-color: rgba(52, 152, 219, 0.23);
+}
+
+.d-p-detallesDerecha{
+
+}
