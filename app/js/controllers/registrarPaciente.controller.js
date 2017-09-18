@@ -21,7 +21,7 @@ triage
 
       function registerPatient(patientInfo) {
 
-        patientInfo.fechaNacimiento = dateService.getDateFormatWithDiagonals(patientInfo.fechaNacimiento);
+        patientInfo.fechaNacimiento = patientInfo.fechaNacimiento.toString();
 
         patientService.setPatient(patientInfo);
 

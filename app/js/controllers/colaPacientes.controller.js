@@ -9,6 +9,9 @@ triage
       var vm = this;
       vm.view = 'informacionBasica';
       vm.patientQueue = {};
+      vm.patientKey = '';
+      vm.growl = growl;
+      vm.config = {};
 
 
       //public functions
@@ -16,31 +19,13 @@ triage
       vm.openRegisterSymptom = openRegisterSymptom;
       vm.openPatientDetails = openPatientDetails;
       vm.closeModalOfRegisterPatient = closeModalOfRegisterPatient;
-      vm.closeModalofRegisterSymptom = closeModalofRegisterSymptom;
-      vm.nextInModalOfRegisterSymptom = nextInModalOfRegisterSymptom;
       vm.closeModalPatientDetails = closeModalPatientDetails;
 
       //private functions
       function activate() {
 
-        patientService.getPatientQueue().then(function(response){
-          vm.patientQueue = response;
-        });
-        var date = new Date();
-        date.setMinutes(date.getMinutes() + 10)
-        var newDate = new Date();
+        getQueue();
 
-        var i = date.toString();
-        var y = newDate.toString();
-
-        console.log(i);
-        console.log(y);
-
-        var d1 = new Date(i);
-        var d2 = new Date(y);
-
-        console.log((d1 - d2)*0.001);
-        console.log(date , newDate)
       }
 
       activate();
@@ -57,13 +42,20 @@ triage
       }
 
       function openRegisterSymptom() {
-        vm.modalRegisterSymptom = $uibModal.open({
-          animation: true,
-          templateUrl: 'views/modals/registrarSintomas.modal.html',
-          scope: $scope,
-          size: 'lm',
-          backdrop: 'static'
-        });
+
+        if(vm.patientKey != '') {
+
+          vm.modalRegisterSymptom = $uibModal.open({
+            animation: true,
+            templateUrl: 'views/modals/registrarSintomas.modal.html',
+            scope: $scope,
+            controller: "registrarSintomasCtrl as vm",
+            size: 'lm',
+            backdrop: 'static'
+          });
+        }else{
+          alertService.error('Error al registrar paciente', 'Introduzca primero el numero de clave del paciente')
+        }
       }
 
       function openPatientDetails() {
@@ -88,16 +80,14 @@ triage
 
       }
 
-      function closeModalofRegisterSymptom() {
+      function getQueue() {
+        firebase.database().ref('Hospital/colaPacientes')
+          .on('value', function (DataSnapshot) {
 
-+
-        vm.modalRegisterSymptom.dismiss();
-      }
+            vm.patientQueue = DataSnapshot.val();
+            $rootScope.$applyAsync();
 
-      function nextInModalOfRegisterSymptom() {
-
-
-        vm.modalRegisterSymptom.dismiss();
+          })
       }
 
 

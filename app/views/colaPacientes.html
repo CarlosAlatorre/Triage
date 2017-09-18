@@ -4,6 +4,7 @@
 
 <section id="main">
 
+  <div growl></div>
   <div class="card m-l-20 m-r-20">
 
     <div class="row p-t-20">
@@ -34,22 +35,22 @@
 
           <tbody>
 
-          <tr ng-click="vm.openPatientDetails()" class="cursor-pointer" ng-repeat="patient in vm.patientQueue">
+          <tr ng-click="vm.openPatientDetails()" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
 
             <td>{{ patient.nombre }}</td>
-            <td>{{ patient.pacienteKey }}</td>
+            <td>{{ patient.claveSeguro }}</td>
             <td>
 
               <span ng-repeat="sintoma in patient.sintomas">
-                {{ sintoma.nombre }}, 
+                {{ sintoma.nombre }},
               </span>
 
             </td>
             <td>
-              <div class="timer">
-                <timer interval="1000" countdown="600">{{ minutes }}:{{ seconds }}</timer>
+              <div class="timer" align="center">
+                <timer end-time="patient.tiempoEnCola">{{ hours }}:{{ minutes }}:{{ seconds }}</timer>
               </div>
-            </td>   
+            </td>
 
           </tr>
           </tbody>
@@ -71,6 +72,7 @@
               <input type="text"
                      class="form-control p-l-5 m-t-5"
                      placeholder="Ejemplo: 13020203"
+                     ng-model="vm.patientKey"
                      required>
               <!--</div>-->
             </div>
@@ -78,12 +80,12 @@
 
           <div class="row">
             <div class="col-xs-offset-2 col-xs-8 m-t-15">
-              <button class="btn btn-danger" style="width: 100%; border-radius: 5px 5px 5px 5px; background-color: #e74c3c !important;" ng-click="vm.openRegisterPatient()">Registrar</button>
+              <button class="btn btn-danger" style="width: 100%; border-radius: 5px 5px 5px 5px; background-color: #e74c3c !important;" ng-click="vm.openRegisterSymptom()">Registrar</button>
             </div>
           </div>
         </div>
 
-        <div class="c-p-crear-paciente" ng-click="vm.openRegisterSymptom()">
+        <div class="c-p-crear-paciente" ng-click="vm.openRegisterPatient()">
 
           <span class="c-p-label-crear">Crear nuevo paciente</span>
 
