@@ -12,7 +12,8 @@ var triage = angular.module('triage', [
   'angular-growl',
   'notification',
   'ngMaterial',
-  'angular-chrono'
+  'angular-chrono',
+  'timer'
   // 'ngSanitize',
   // 'ngCsv',
   // 'firebase'

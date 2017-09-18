@@ -34,16 +34,22 @@
 
           <tbody>
 
-          <tr ng-click="vm.openPatientDetails()" class="cursor-pointer">
+          <tr ng-click="vm.openPatientDetails()" class="cursor-pointer" ng-repeat="patient in vm.patientQueue">
 
-            <td>Gabriel Rodriguez Mendez</td>
-            <td>130209656520</td>
-            <td>Tos</td>
+            <td>{{ patient.nombre }}</td>
+            <td>{{ patient.pacienteKey }}</td>
+            <td>
+
+              <span ng-repeat="sintoma in patient.sintomas">
+                {{ sintoma.nombre }}, 
+              </span>
+
+            </td>
             <td>
               <div class="timer">
-                <timer interval="1000" countdown="100">{{countdown}}</timer>
+                <timer interval="1000" countdown="600">{{ minutes }}:{{ seconds }}</timer>
               </div>
-            </td>
+            </td>   
 
           </tr>
           </tbody>

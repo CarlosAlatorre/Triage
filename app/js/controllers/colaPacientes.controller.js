@@ -2,12 +2,13 @@
  * Created by Toshiba on 14/02/2017.
  */
 triage
-  .controller('colaPacientesCtrl', ['$location', '$scope', '$rootScope', 'alertService', '$uibModal', 'growl', '$timeout', 'chronoService',
-    function ($location, $scope, $rootScope, alertService, $uibModal, growl, $timeout, chronoService) {
+  .controller('colaPacientesCtrl', ['patientService', '$location', '$scope', '$rootScope', 'alertService', '$uibModal', 'growl', '$timeout', 'chronoService',
+    function (patientService, $location, $scope, $rootScope, alertService, $uibModal, growl, $timeout, chronoService) {
 
       //public var
       var vm = this;
       vm.view = 'informacionBasica';
+      vm.patientQueue = {};
 
 
       //public functions
@@ -22,7 +23,24 @@ triage
       //private functions
       function activate() {
 
+        patientService.getPatientQueue().then(function(response){
+          vm.patientQueue = response;
+        });
+        var date = new Date();
+        date.setMinutes(date.getMinutes() + 10)
+        var newDate = new Date();
 
+        var i = date.toString();
+        var y = newDate.toString();
+
+        console.log(i);
+        console.log(y);
+
+        var d1 = new Date(i);
+        var d2 = new Date(y);
+
+        console.log((d1 - d2)*0.001);
+        console.log(date , newDate)
       }
 
       activate();
