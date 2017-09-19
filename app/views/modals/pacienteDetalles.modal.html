@@ -15,14 +15,14 @@
         <!--Nombre del paciente-->
         <div class="row">
           <div class="col-xs-12" align="center">
-            <p class="d-p-nombre">Jorge Meneces Lopez</p>
+            <p class="d-p-nombre">{{ vm.patientInfo.nombres }} {{ vm.patientInfo.apellidos }}</p>
           </div>
         </div>
 
         <!--Edad del paciente-->
         <div class="row">
           <div class="col-xs-12" align="center">
-            <p class="d-t-edad">22 años</p>
+            <p class="d-t-edad">{{ vm.patientInfo.edad }}</p>
           </div>
         </div>
 
@@ -35,7 +35,7 @@
           </div>
 
           <div class="col-xs-7">
-            Masculino
+            {{ vm.patientInfo.genero == 'M' ? 'Masculino' : 'Femenino' }}
           </div>
         </div>
 
@@ -47,7 +47,7 @@
           </div>
 
           <div class="col-xs-7">
-            26 / 08 / 1990
+            {{ vm.getBirthDay(vm.patientInfo.fechaNacimiento) }}
           </div>
 
         </div>
@@ -60,7 +60,7 @@
           </div>
 
           <div class="col-xs-7">
-            121361684
+            {{ vm.patientInfo.claveSeguro }}
           </div>
 
         </div>
@@ -73,7 +73,7 @@
           </div>
 
           <div class="col-xs-7">
-            A+
+            {{ vm.patientInfo.tipoSangre }}
           </div>
 
         </div>
@@ -86,7 +86,7 @@
           </div>
 
           <div class="col-xs-7">
-            Ninguna
+            {{ vm.patientInfo.alergias }}
           </div>
 
         </div>
@@ -100,11 +100,11 @@
         <div class="row d-p-row-requerimientos">
 
           <div class="col-xs-10" align="center">
-            Requiere: <span class="d-p-requerimientos">Cirugia</span>
+            Requiere: <span class="d-p-requerimientos"> <span ng-repeat="item in vm.patientSymptoms.requisitos">{{ item.nombre }}<span ng-if="!$last">, </span></span></span>
           </div>
 
           <div class="col-xs-2" align="center">
-            <i class="zmdi zmdi-close zmdi-hc-2x d-p-close-icon cursor-pointer"></i>
+            <i class="zmdi zmdi-close zmdi-hc-2x d-p-close-icon cursor-pointer" ng-click="vm.closeModalPatientDetails()"></i>
           </div>
 
         </div>
@@ -119,7 +119,7 @@
             <div class="row d-p-rows-r">
               <span>Pulso</span>
               <div class="fg-line m-l-10">
-                <input type="text" name="clientName" class="form-control" required>
+                <input type="text" name="clientName" class="form-control" ng-model="vm.patientSymptoms.detalles.pulso" required>
               </div>
             </div>
 
@@ -127,7 +127,7 @@
             <div class="row d-p-rows-r">
               <span>Presion arterial Sintolica</span>
               <div class="fg-line m-l-10">
-                <input type="text" name="clientName" class="form-control" required>
+                <input type="text" name="clientName" class="form-control" ng-model="vm.patientSymptoms.detalles.presionSintolica" required>
               </div>
             </div>
 
@@ -135,7 +135,7 @@
             <div class="row d-p-rows-r">
               <span>Presion arterial Diastolica</span>
               <div class="fg-line m-l-10">
-                <input type="text" name="clientName" class="form-control" required>
+                <input type="text" name="clientName" class="form-control" ng-model="vm.patientSymptoms.detalles.presionDiastolica" required>
               </div>
             </div>
 
@@ -143,7 +143,7 @@
             <div class="row d-p-rows-r">
               <span>Temperatura</span>
               <div class="fg-line m-l-10">
-                <input type="text" name="clientName" class="form-control" required>
+                <input type="text" name="clientName" class="form-control" ng-model="vm.patientSymptoms.detalles.temperatura" required>
               </div>
             </div>
 
@@ -151,7 +151,7 @@
             <div class="row d-p-rows-r">
               <span>spO2</span>
               <div class="fg-line m-l-10">
-                <input type="text" name="clientName" class="form-control" required>
+                <input type="text" name="clientName" class="form-control" ng-model="vm.patientSymptoms.detalles.spO2" required>
               </div>
             </div>
 
@@ -164,23 +164,24 @@
             <div class="row d-p-sintomas">
 
               <span style="margin-bottom: 5px">Sintomas</span>
-              <table class="table table-hover m-t-10">
+              <table class="table table-hover table-sintomas">
 
                 <tbody>
 
-                <tr>
-                  <td>Tos</td>
-                </tr>
-
-                <tr>
-                  <td>Tos</td>
-                </tr>
-
-                <tr>
-                  <td>Tos</td>
+                <tr ng-repeat="sintoma in vm.patientSymptoms.sintomas">
+                  <td class="r-s-columnas">
+                    <div class="{{ sintoma.nivel == 'v' ? 'r-s-s-v' : (sintoma.nivel == 'n' ? 'r-s-s-n' : 'r-s-s-r') }}">
+                      <div class="row">
+                        <div class="col-xs-9 r-s-a-s">
+                          {{ sintoma.nombre }}
+                        </div>
+                      </div>
+                    </div>
+                  </td>
                 </tr>
 
                 </tbody>
+
               </table>
 
             </div>
@@ -191,7 +192,7 @@
               <div class="col-xs-12 m-t-5">
                 <span>Observaciones</span>
                 <div class="fg-line">
-                  <textarea name="observaciones" id="" cols="30" rows="7" class="form-control p-t-5" placeholder="Escribe aqui..."></textarea>
+                  <textarea name="observaciones" id="" cols="30" rows="4" class="form-control p-t-5" placeholder="Escribe aqui..." ng-model="vm.patientSymptoms.observaciones"></textarea>
                 </div>
               </div>
 

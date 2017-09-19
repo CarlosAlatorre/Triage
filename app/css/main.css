@@ -8556,6 +8556,8 @@
   margin-top: 10px;
   overflow-y: auto;
   margin-right: 10px;
+  height: 215px;
+  overflow-x: hidden;
 }
 
 .d-p-observaciones{

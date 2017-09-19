@@ -32,6 +32,7 @@ triage
       vm.patientInfo = {};
       vm.parent = $scope.$parent.vm;
       vm.view = 'triage';
+      vm.patientDetails = {};
 
 
       //public functions
@@ -65,7 +66,7 @@ triage
             break;
 
           case 'vistaPrevia':
-            patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms, vm.requerimientos);
+            patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms, vm.requerimientos, vm.patientDetails, vm.observaciones);
             vm.parent.growl.success('Paciente agregado a la cola!', vm.parent.config);
             vm.parent.patientKey = '';
             vm.parent.modalRegisterSymptom.dismiss();

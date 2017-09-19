@@ -35,19 +35,19 @@
 
           <tbody>
 
-          <tr ng-click="vm.openPatientDetails()" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
+          <tr ng-click="vm.openPatientDetails(patient.$key)" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
 
             <td>{{ patient.nombre }}</td>
             <td>{{ patient.claveSeguro }}</td>
             <td>
 
-              <span ng-repeat="sintoma in patient.sintomas">
-                {{ sintoma.nombre }},
+              <span ng-repeat="sintoma in patient.sintomas | limitTo : 2">
+                {{ sintoma.nombre }}<span ng-if="!$last">,</span>
               </span>
 
             </td>
             <td>
-              <div class="timer" align="center">
+              <div class="timer" align="center" style="{{ vm.getEmergencyColor(patient.nivelEmergencia) }}">
                 <timer end-time="patient.tiempoEnCola">{{ hours }}:{{ minutes }}:{{ seconds }}</timer>
               </div>
             </td>

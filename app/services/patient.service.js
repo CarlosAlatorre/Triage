@@ -8,7 +8,7 @@ triage
 
       },
 
-      addPatientToTheQueue: function (patient, symptoms, requisitos) {
+      addPatientToTheQueue: function (patient, symptoms, requisitos, details, observaciones) {
 
         var timeInQueue = new Date();
 
@@ -23,7 +23,7 @@ triage
           sintomas.push({
             'nombre': symptoms[item].nombre,
             'nivel': symptoms[item].nivel
-          })
+          });
 
           if (symptoms[item].nivel == 'r') {
             nivelEmergencia = 'r';
@@ -70,16 +70,18 @@ triage
             break;
         }
 
-        symptoms = {}
-        ;
+        symptoms = {};
 
         symptoms['sintomas'] = sintomas;
         symptoms['requisitos'] = requisitos;
+        symptoms['detalles'] = details;
+        symptoms['observaciones'] = observaciones;
 
         symptoms['nombre'] = patient.nombres + ' ' + patient.apellidos;
         symptoms['claveSeguro'] = patient.claveSeguro;
         symptoms['tiempoEnCola'] = timeInQueue.getTime();
         symptoms['fechaLimite'] = timeInQueue.toString();
+        symptoms['nivelEmergencia'] = nivelEmergencia;
 
         firebase.database().ref('Hospital/colaPacientes/').push(symptoms);
 
@@ -92,6 +94,18 @@ triage
           .once('value', function (dataSnapshot) {
             var response = dataSnapshot.val();
             response.fechaNacimiento = new Date(response.fechaNacimiento);
+            deferred.resolve(response);
+          });
+
+        return deferred.promise;
+      },
+
+      getPatientInQueue: function (patientQueueKey) {
+        var deferred = $q.defer();
+
+        firebase.database().ref('Hospital/colaPacientes/' + patientQueueKey)
+          .once('value', function (dataSnapshot) {
+            var response = dataSnapshot.val();
             deferred.resolve(response);
           });
 
