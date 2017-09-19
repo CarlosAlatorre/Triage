@@ -13,7 +13,7 @@
       </div>
       <div class="col-xs-4 p-l-0">
         <div class="fg-line m-l-10">
-          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar...">
+          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar..." ng-model="buscador">
         </div>
       </div>
     </div>
@@ -35,7 +35,7 @@
 
           <tbody>
 
-          <tr ng-click="vm.openPatientDetails(patient.$key)" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
+          <tr ng-click="vm.openPatientDetails(patient.$key)" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray | filter: buscador" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
 
             <td>{{ patient.nombre }}</td>
             <td>{{ patient.claveSeguro }}</td>
