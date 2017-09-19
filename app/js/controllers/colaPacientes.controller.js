@@ -9,10 +9,9 @@ triage
       var vm = this;
       vm.view = 'informacionBasica';
       vm.patientQueue = {};
-      vm.patientKey = '';
+      vm.patientKey = 13330414;
       vm.growl = growl;
       vm.config = {};
-
 
       //public functions
       vm.openRegisterPatient = openRegisterPatient;
@@ -20,6 +19,8 @@ triage
       vm.openPatientDetails = openPatientDetails;
       vm.closeModalOfRegisterPatient = closeModalOfRegisterPatient;
       vm.closeModalPatientDetails = closeModalPatientDetails;
+
+      vm.registrarSintoma = registrarSintoma;
 
       //private functions
       function activate() {
@@ -89,6 +90,11 @@ triage
 
           })
       }
+
+      function registrarSintoma(sintoma) {
+        firebase.database().ref('sintomas').push(sintoma)
+      }
+
 
 
     }

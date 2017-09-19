@@ -91,6 +91,21 @@
 
         </div>
 
+        <div>
+          <input type="text" class="form-control" ng-model="nuevoSintoma.nombre" placeholder="Nombre del sintoma">
+          <input type="text" class="form-control" ng-model="nuevoSintoma.nivel" placeholder="Nivel de emergencia">
+          <input type="text" class="form-control" ng-model="nuevoSintoma.triage" placeholder="Tipo de triage">
+
+          <button class="btn btn-primary" ng-click="vm.registrarSintoma(nuevoSintoma)">Agregar sintoma</button>
+
+          <p class="m-t-10">Tipos de niveles de emergencia</p>
+          <p>Verde = v</p>
+          <p>Naranja = n</p>
+          <p>Rojo = r</p>
+          <p>Amarillo = a</p>
+          <p>azul = az</p>
+        </div>
+
       </div>
 
     </div>

@@ -1,6 +1,4 @@
 <form name="pacienteForm" id="form" ng-submit="">
-  <link rel="stylesheet" href="vendors/bower_components/chosen/chosen.min.css">
-  <script src="vendors/bower_components/chosen/chosen.jquery.js"></script>
 
   <!--Header-->
   <div class="modal-header r-s-header">
@@ -9,6 +7,14 @@
 
       <li class="r-s-close-icon">
         <span class="zmdi zmdi-close cursor-pointer" ng-click="vm.closeModalofRegisterSymptom()"></span>
+      </li>
+
+      <li class="{{vm.view == 'triage' ? 'active' : ''}}">
+        <a href="" ng-click="vm.view = 'triage'">
+          <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"
+               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
+          Triage
+        </a>
       </li>
 
       <li class="{{vm.view == 'informacionBasica' ? 'active' : ''}}">
@@ -27,13 +33,13 @@
         </a>
       </li>
 
-      <li class="{{vm.view == 'vistaPrevia' ? 'active' : ''}}">
-        <a href="" ng-click="vm.view = 'vistaPrevia'">
-          <img class="r-s-v-icon" style="{{ vm.view == 'vistaPrevia' ? '': 'color: #7a7a7a !important' }}"
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC3klEQVRoQ+2Yj1FUMRDGv6sAqUCoAKlArUCpAKhArQCtQK1AqQCpAKxAqQCoAK1A54eJE3L5s3m5x83NZGfezIPbbPbb/XY3eQttuCw23H8NAOvO4MjAyEBnBAaFOgPYvXxkIAjhjqRXkp5J4v1FFN5LSTeSfko6d+9rz8ATSYeS3jqnWxwCzCdJp5J+tSwMdadSCMffOMd57xGcB8jnKUCmAMDx95J6HY9BAwS7ADFLCwB4/SXB7XgzKAHf4ToPQl3wUBdQriSsPbbWiBXAa+d8KeoUJrUAt0tCIKAMBZ8TsgGIb7VUWAB8dI6VbLHZ19pm0e9HLiilZQB9V1KoAYAybLRq5709CwgCQ4CSkgMAVS4cb0vOQxvo1SPQpEQnbFMXB6kulQJgdR7DuxnOA4pu5YcZDnxwjsRgqYlrQwRoCC9jECkAFtqwH90mRa/SekDQKmOBJrXuxJolOsUArM5jLFW4RP6sEk2iSEZCsdSC138AIgTQYgRj+0Gf98Zx7HkFwPfELGFG/DDQyKv8D14I4K5xuqbo98foRM9atmBObPMSGuKfW0YH4rV+2WMB+O2DvQ4KpVrvSijkq9zSDdClL8ej/jGK+EH3S3HR2tJybZQ2eZKhYm8bXdozN8joJnuGesgNMgYYQHxHovPwd9w+2cI6yK5SJ4PSUcICAgpBpR5hbtSOIwQAnaWbW+0wZ6HTlJOoB2yZPTmq3tuoAUCHIy3nmpJMAWFxntsZd4ysWACwmPSRjdKcgE6c3S0XGu4YJdrQ5wG4kguNR0+xAaJ2VECH+qHowislTYHirt0v4Ds6tUCYKRSnj5TSUVqmtqXIiTp2oaxZrBSKDXJnAAhPLxAcx2me5u9DUwF4QAAh3QB5ag7bP8Vb5zSUa3bc79ULIPSZGqEw/afFuFbgtv+0SHGaOF4LyioB1Paa5fcBYJawNhgdGWgI1iyqIwOzhLXB6MhAQ7BmUd34DPwFmn+PMQdvLz8AAAAASUVORK5CYII=">
-          Vista previa
-        </a>
-      </li>
+      <!--<li class="{{vm.view == 'vistaPrevia' ? 'active' : ''}}">-->
+        <!--<a href="" ng-click="vm.view = 'vistaPrevia'">-->
+          <!--<img class="r-s-v-icon" style="{{ vm.view == 'vistaPrevia' ? '': 'color: #7a7a7a !important' }}"-->
+               <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC3klEQVRoQ+2Yj1FUMRDGv6sAqUCoAKlArUCpAKhArQCtQK1AqQCpAKxAqQCoAK1A54eJE3L5s3m5x83NZGfezIPbbPbb/XY3eQttuCw23H8NAOvO4MjAyEBnBAaFOgPYvXxkIAjhjqRXkp5J4v1FFN5LSTeSfko6d+9rz8ATSYeS3jqnWxwCzCdJp5J+tSwMdadSCMffOMd57xGcB8jnKUCmAMDx95J6HY9BAwS7ADFLCwB4/SXB7XgzKAHf4ToPQl3wUBdQriSsPbbWiBXAa+d8KeoUJrUAt0tCIKAMBZ8TsgGIb7VUWAB8dI6VbLHZ19pm0e9HLiilZQB9V1KoAYAybLRq5709CwgCQ4CSkgMAVS4cb0vOQxvo1SPQpEQnbFMXB6kulQJgdR7DuxnOA4pu5YcZDnxwjsRgqYlrQwRoCC9jECkAFtqwH90mRa/SekDQKmOBJrXuxJolOsUArM5jLFW4RP6sEk2iSEZCsdSC138AIgTQYgRj+0Gf98Zx7HkFwPfELGFG/DDQyKv8D14I4K5xuqbo98foRM9atmBObPMSGuKfW0YH4rV+2WMB+O2DvQ4KpVrvSijkq9zSDdClL8ej/jGK+EH3S3HR2tJybZQ2eZKhYm8bXdozN8joJnuGesgNMgYYQHxHovPwd9w+2cI6yK5SJ4PSUcICAgpBpR5hbtSOIwQAnaWbW+0wZ6HTlJOoB2yZPTmq3tuoAUCHIy3nmpJMAWFxntsZd4ysWACwmPSRjdKcgE6c3S0XGu4YJdrQ5wG4kguNR0+xAaJ2VECH+qHowislTYHirt0v4Ds6tUCYKRSnj5TSUVqmtqXIiTp2oaxZrBSKDXJnAAhPLxAcx2me5u9DUwF4QAAh3QB5ag7bP8Vb5zSUa3bc79ULIPSZGqEw/afFuFbgtv+0SHGaOF4LyioB1Paa5fcBYJawNhgdGWgI1iyqIwOzhLXB6MhAQ7BmUd34DPwFmn+PMQdvLz8AAAAASUVORK5CYII=">-->
+          <!--Vista previa-->
+        <!--</a>-->
+      <!--</li>-->
 
       <li class="r-s-boton-siguiente">
         <a href="" ng-click="vm.nextInModalOfRegisterSymptom(vm.view)" class="r-s-b-siguiente">{{ vm.view == 'vistaPrevia' ? 'Terminar' : 'Siguiente' }}</a>
@@ -49,13 +55,34 @@
 
     <div class="row">
 
+      <!--Tipo de triage-->
+      <div ng-if="vm.view == 'triage'">
+
+        <div class="col-xs-4 columna-imagen-triage">
+
+          <img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer">
+
+        </div>
+        <div class="col-xs-4 columna-imagen-triage">
+
+          <img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer">
+
+        </div>
+        <div class="col-xs-4 columna-imagen-triage">
+
+          <img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer">
+
+        </div>
+
+      </div>
+
       <!--Informacion basica-->
       <div ng-if="vm.view == 'informacionBasica'">
 
         <div class="col-xs-3">
 
           <div class="r-s-foto">
-            <img src="img/user.png" alt="" class="r-s-fotoPatient">
+            <img src="img/img-profile-M.png" alt="" class="r-s-fotoPatient">
           </div>
 
         </div>
@@ -223,36 +250,40 @@
 
           <div class="row">
             <div class="col-xs-12">
-              <span>Sintomas</span>
+              <span>Selecciona los sintomas</span>
               <div class="fg-line m-l-10">
-                <select chosen data-placeholder="Select a country..." class="w-100">
-                  <option value="United States">United States</option>
-                  <option value="United Kingdom">United Kingdom</option>
-                  <option value="Afghanistan">Afghanistan</option>
-                  <option value="Aland Islands">Aland Islands</option>
-                  <option value="Albania">Albania</option>
-                  <option value="Algeria">Algeria</option>
-                  <option value="American Samoa">American Samoa</option>
+
+                <select class="form-control" ng-options="item.nombre for item in vm.listSymptoms" ng-model="vm.symptom" ng-change="vm.addSymptom(vm.symptom)">
+
                 </select>
 
               </div>
             </div>
           </div>
 
-          <div class="row m-t-15">
+          <div class="row m-t-15" style="    height: 300px;overflow-y: auto;overflow-x: hidden;">
             <div class="col-xs-12 p-r-0">
+
+              <div class="row" ng-if="vm.symptoms.length == 0" align="center">
+                <div class="zmdi zmdi-quote m-t-20 not-found-quote">
+                </div>
+                <div class="not-found">No hay</div>
+                <div class="m-b-30 not-found">Sintomas</div>
+              </div>
+
               <table class="table table-hover table-sintomas">
 
                 <tbody>
-                <tr>
+
+                <tr ng-repeat="sintoma in vm.symptoms track by $index">
                   <td class="r-s-columnas">
-                    <div class="r-s-s-r">
+                    <div class="{{ sintoma.nivel == 'v' ? 'r-s-s-v' : (sintoma.nivel == 'n' ? 'r-s-s-n' : 'r-s-s-r') }}">
                       <div class="row">
                         <div class="col-xs-9 r-s-a-s">
-                          Tos
+                          {{ sintoma.nombre }}
                         </div>
                         <div class="col-xs-2 r-s-a-s-r">
-                          <img class="r-s-trash-icon cursor-pointer"
+                          <img class="r-s-trash-icon cursor-pointer" ng-click="vm.removeItem(vm.symptoms, $index)"
                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABQUlEQVRoQ+1Z7W3CUAy8m6AjwAjdpIxAN+gobEBHoJt0BNgAJnD1pARVUZFt6vAUdPlr5/k+7BcjiIU/XDh+iEBvB+XAUzlgZlsAe4fUJ8n3KuJlLRQEP+IuIxEmYGZWpVrkHJIhbKGkVlAEIrL/ypEDScG6pYdnoBtCp3CawNzDHO39kZcIVLeWHPAU1Qx4t0pwhSgf4mnvTp3y4ldAIuBYfGsGPIW9uBzwbp8xLgcGJaJCeMKWrRJej3txzYBnlWZg8oHSDAwtoSG+dXtoFwreKmohtdCkVbr9JvZWBS/efZUIzpyb1s0BF1kw4REEzgBegniyaSeS68xL91yjBwBvmSKJ3C+Sm0R+/n9iM2sKfc/gwgXAK8njrATa4QOJXSsIYJUp+EfuaRDkIwu+nZVuoX+CLX9dBMolTR64eAd+APwQKUB3Y01CAAAAAElFTkSuQmCC">
                         </div>
                       </div>
@@ -260,37 +291,6 @@
                   </td>
                 </tr>
 
-                <tr>
-                  <td class="r-s-columnas">
-                    <div class="r-s-s-n">
-                      <div class="row">
-                        <div class="col-xs-9 r-s-a-s">
-                          Tos
-                        </div>
-                        <div class="col-xs-2 r-s-a-s-r">
-                          <img class="r-s-trash-icon"
-                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABQUlEQVRoQ+1Z7W3CUAy8m6AjwAjdpIxAN+gobEBHoJt0BNgAJnD1pARVUZFt6vAUdPlr5/k+7BcjiIU/XDh+iEBvB+XAUzlgZlsAe4fUJ8n3KuJlLRQEP+IuIxEmYGZWpVrkHJIhbKGkVlAEIrL/ypEDScG6pYdnoBtCp3CawNzDHO39kZcIVLeWHPAU1Qx4t0pwhSgf4mnvTp3y4ldAIuBYfGsGPIW9uBzwbp8xLgcGJaJCeMKWrRJej3txzYBnlWZg8oHSDAwtoSG+dXtoFwreKmohtdCkVbr9JvZWBS/efZUIzpyb1s0BF1kw4REEzgBegniyaSeS68xL91yjBwBvmSKJ3C+Sm0R+/n9iM2sKfc/gwgXAK8njrATa4QOJXSsIYJUp+EfuaRDkIwu+nZVuoX+CLX9dBMolTR64eAd+APwQKUB3Y01CAAAAAElFTkSuQmCC">
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td class="r-s-columnas">
-                    <div class="r-s-s-v">
-                      <div class="row">
-                        <div class="col-xs-9 r-s-a-s">
-                          Tos
-                        </div>
-                        <div class="col-xs-2 r-s-a-s-r">
-                          <img class="r-s-trash-icon"
-                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABQUlEQVRoQ+1Z7W3CUAy8m6AjwAjdpIxAN+gobEBHoJt0BNgAJnD1pARVUZFt6vAUdPlr5/k+7BcjiIU/XDh+iEBvB+XAUzlgZlsAe4fUJ8n3KuJlLRQEP+IuIxEmYGZWpVrkHJIhbKGkVlAEIrL/ypEDScG6pYdnoBtCp3CawNzDHO39kZcIVLeWHPAU1Qx4t0pwhSgf4mnvTp3y4ldAIuBYfGsGPIW9uBzwbp8xLgcGJaJCeMKWrRJej3txzYBnlWZg8oHSDAwtoSG+dXtoFwreKmohtdCkVbr9JvZWBS/efZUIzpyb1s0BF1kw4REEzgBegniyaSeS68xL91yjBwBvmSKJ3C+Sm0R+/n9iM2sKfc/gwgXAK8njrATa4QOJXSsIYJUp+EfuaRDkIwu+nZVuoX+CLX9dBMolTR64eAd+APwQKUB3Y01CAAAAAElFTkSuQmCC">
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
                 </tbody>
 
               </table>
@@ -306,7 +306,6 @@
               <span>Requiere</span>
             </div>
           </div>
-          {{vm.symptoms}}
 
           <div class="row">
             <div class="col-xs-12">
@@ -394,6 +393,7 @@
                        rows="8"
                        cols="40"
                           placeholder="Escriba aquí..."
+                          ng-model="vm.symptoms.observaciones"
                           required ></textarea>
               </div>
             </div>

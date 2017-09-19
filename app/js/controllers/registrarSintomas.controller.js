@@ -5,9 +5,33 @@ triage
       //public var
       var vm = this;
       vm.symptoms = [];
+      vm.requerimientos = [];
+      vm.listSymptoms = [{
+        'nombre' : 'Tos',
+        'nivel' : 'v'
+      },{
+        'nombre' : 'Tossss',
+        'nivel' : 'r'
+      },{
+        'nombre' : 'Diarrea',
+        'nivel' : 'n'
+      },{
+        'nombre' : 'Tosasd',
+        'nivel' : 'v'
+      },{
+        'nombre' : 'Tosasd',
+        'nivel' : 'v'
+      },{
+        'nombre' : 'Tosdsa',
+        'nivel' : 'v'
+      },{
+        'nombre' : 'Tosdsdsds',
+        'nivel' : 'v'
+      }
+      ]
       vm.patientInfo = {};
       vm.parent = $scope.$parent.vm;
-      vm.view = 'informacionBasica';
+      vm.view = 'triage';
 
 
       //public functions
@@ -15,6 +39,8 @@ triage
       vm.closeModalofRegisterSymptom = closeModalofRegisterSymptom;
       vm.addOrDeleteItemInAssignment = addOrDeleteItemInAssignment;
       vm.verifyChecked = verifyChecked;
+      vm.addSymptom = addSymptom;
+      vm.removeItem = removeItem;
 
       //private functions
       function activate() {
@@ -28,7 +54,7 @@ triage
       activate();
 
       function nextInModalOfRegisterSymptom(view) {
-        switch (view){
+        switch (view) {
 
           case 'informacionBasica':
             vm.view = 'sintomas';
@@ -39,7 +65,7 @@ triage
             break;
 
           case 'vistaPrevia':
-            patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms);
+            patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms, vm.requerimientos);
             vm.parent.growl.success('Paciente agregado a la cola!', vm.parent.config);
             vm.parent.patientKey = '';
             vm.parent.modalRegisterSymptom.dismiss();
@@ -56,14 +82,14 @@ triage
 
       function addOrDeleteItemInAssignment(requisito) {
         //noinspection JSDuplicatedDeclaration
-        var symptomIndex = _.findIndex(vm.symptoms, {'nombre' : requisito});
+        var symptomIndex = _.findIndex(vm.requerimientos, {'nombre': requisito});
 
-        if(symptomIndex == -1){
-          vm.symptoms.push({
+        if (symptomIndex == -1) {
+          vm.requerimientos.push({
             nombre: requisito
           })
-        }else{
-          vm.symptoms.splice(symptomIndex, 1);
+        } else {
+          vm.requerimientos.splice(symptomIndex, 1);
 
         }
       }
@@ -71,9 +97,20 @@ triage
       function verifyChecked(requisito) {
         var checked;
 
-        checked =_.findIndex(vm.symptoms, {'nombre' : requisito});
+        checked = _.findIndex(vm.requerimientos, {'nombre': requisito});
 
         return checked;
+      }
+
+
+      function addSymptom(symptom) {
+
+        vm.symptoms.push(symptom)
+
+      }
+
+      function removeItem(array, index) {
+        array.splice(index, 1);
       }
 
 
