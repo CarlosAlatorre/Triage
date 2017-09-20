@@ -1,427 +1,442 @@
-<form name="pacienteForm" id="form" ng-submit="">
+<div style="height: 450px; width: 700px">
 
-  <!--Header-->
-  <div class="modal-header r-s-header">
-
-    <ul class="tab-nav">
-
-      <li class="r-s-close-icon">
-        <span class="zmdi zmdi-close cursor-pointer" ng-click="vm.closeModalofRegisterSymptom()"></span>
-      </li>
-
-      <li class="{{vm.view == 'triage' ? 'active' : ''}}">
-        <a href="" ng-click="vm.view = 'triage'">
-          <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
-          Triage
-        </a>
-      </li>
-
-      <li class="{{vm.view == 'informacionBasica' ? 'active' : ''}}">
-        <a href="" ng-click="vm.view = 'informacionBasica'">
-          <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
-          Informacion basica
-        </a>
-      </li>
-
-      <li class="{{vm.view == 'sintomas' ? 'active' : ''}}">
-        <a href="" ng-click="vm.view = 'sintomas'">
-          <img class="r-s-s-icon" style="{{ vm.view == 'sintomas' ? '': 'color: #7a7a7a !important' }}"
-               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACbUlEQVRoQ+1Z7TEFQRDsFwEiQASIABEgAmRABIgAESACRIAIEAEiQARUV+1WjbndvY+d23unbn4979xt9/R83pth5DYbOX5MBIZWMKbACoBzAOsA+HlIewfwAuAYAD//sRABAn4GsDgk6sDZXwA2NIkQgTsAO3MG3sO5B7ArsYUIfM6h9z1mhtBqHYGfBmFWUqAknpACEwFjeSYFmnTrawD7wvNN7mkqVBEFdOVivWbzsbDeCbAu3yqk2wAeLdAD6J2ADh/iZtu/GAMBjhsMH21nAE7HQOAAwFUAaKXlZ5DpNYRic9MTgK0M0PLW3gjEwscfblVKeyNw5HaGmKNTBDiynwBgCCbn/T6rEHcGLjwxi5XS2L4RnPctCEiALJmHbkt7U8g/ACyL7zyBWKKHiIeSPzuE9EGeAEPAG5OWjUt+50vpQ4uErsz71gp4wJRbrpwhUpeumWmlUsWJKuod3FyBEIAllw/0tlSFHpVDXl1l7SWEWE1ScXzjrrPuSwIc5uhNrRRDjdcWFJtv5wT95iFbAV8OY2VzDwAbGk0fJjESoCdDYhw1qA7DhoT4/MprE4sckPVcD24SVB2BrvORmQLem/TWmvvDh4+/xvDYjAQ63yaEPFyXF+YEUgfGZiNNtA60vF6UAONa9gIPJGfBKUoglOivNSNHnRpFCehSSnBsckz+rlaUAIc7DnneWKVYMtm5u1pRArqUdi2dgyVxVy+n7iuugDWJiYDVbttVmdYKsGLoSbHr4db3VfaFf/kTE+t2aF639mbb5wX3hdTPrHy3ycYkF/W2h1r8f3JfGDpBswlOBLJdmPmA0SvwCxNSqDGUSGaRAAAAAElFTkSuQmCC">
-          Sintomas
-        </a>
-      </li>
-
-      <!--<li class="{{vm.view == 'vistaPrevia' ? 'active' : ''}}">-->
-      <!--<a href="" ng-click="vm.view = 'vistaPrevia'">-->
-      <!--<img class="r-s-v-icon" style="{{ vm.view == 'vistaPrevia' ? '': 'color: #7a7a7a !important' }}"-->
-      <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC3klEQVRoQ+2Yj1FUMRDGv6sAqUCoAKlArUCpAKhArQCtQK1AqQCpAKxAqQCoAK1A54eJE3L5s3m5x83NZGfezIPbbPbb/XY3eQttuCw23H8NAOvO4MjAyEBnBAaFOgPYvXxkIAjhjqRXkp5J4v1FFN5LSTeSfko6d+9rz8ATSYeS3jqnWxwCzCdJp5J+tSwMdadSCMffOMd57xGcB8jnKUCmAMDx95J6HY9BAwS7ADFLCwB4/SXB7XgzKAHf4ToPQl3wUBdQriSsPbbWiBXAa+d8KeoUJrUAt0tCIKAMBZ8TsgGIb7VUWAB8dI6VbLHZ19pm0e9HLiilZQB9V1KoAYAybLRq5709CwgCQ4CSkgMAVS4cb0vOQxvo1SPQpEQnbFMXB6kulQJgdR7DuxnOA4pu5YcZDnxwjsRgqYlrQwRoCC9jECkAFtqwH90mRa/SekDQKmOBJrXuxJolOsUArM5jLFW4RP6sEk2iSEZCsdSC138AIgTQYgRj+0Gf98Zx7HkFwPfELGFG/DDQyKv8D14I4K5xuqbo98foRM9atmBObPMSGuKfW0YH4rV+2WMB+O2DvQ4KpVrvSijkq9zSDdClL8ej/jGK+EH3S3HR2tJybZQ2eZKhYm8bXdozN8joJnuGesgNMgYYQHxHovPwd9w+2cI6yK5SJ4PSUcICAgpBpR5hbtSOIwQAnaWbW+0wZ6HTlJOoB2yZPTmq3tuoAUCHIy3nmpJMAWFxntsZd4ysWACwmPSRjdKcgE6c3S0XGu4YJdrQ5wG4kguNR0+xAaJ2VECH+qHowislTYHirt0v4Ds6tUCYKRSnj5TSUVqmtqXIiTp2oaxZrBSKDXJnAAhPLxAcx2me5u9DUwF4QAAh3QB5ag7bP8Vb5zSUa3bc79ULIPSZGqEw/afFuFbgtv+0SHGaOF4LyioB1Paa5fcBYJawNhgdGWgI1iyqIwOzhLXB6MhAQ7BmUd34DPwFmn+PMQdvLz8AAAAASUVORK5CYII=">-->
-      <!--Vista previa-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <li class="r-s-boton-siguiente">
-        <a href="" ng-click="vm.nextInModalOfRegisterSymptom(vm.view)" class="r-s-b-siguiente">{{ vm.view == 'sintomas'
-          ? 'Terminar' : 'Siguiente' }}</a>
-      </li>
-
-    </ul>
-
+  <div class="col-lg-offset-5 col-lg-6" style="margin-top: 20%" ng-if="!vm.elegirTriage">
+    <div class="preloader pls-blue pl-xl" align="center">
+      <svg class="pl-circular" viewBox="25 25 50 50">
+        <circle class="plc-path" cx="50" cy="50" r="20"></circle>
+      </svg>
+    </div>
   </div>
 
+  <!--Tipo de triage-->
+    <div ng-show="!vm.escogido" ng-if="vm.elegirTriage">
 
-  <!--Body-->
-  <div class="modal-body modal-size p-l-15 p-r-15">
-
-    <div class="row">
-
-      <!--Tipo de triage-->
-      <div ng-if="vm.view == 'triage'">
-
-        <div >
-          <div class="col-xs-4 columna-imagen-triage">
-
-            <img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer" ng-click="vm.escogido = !vm.escogido">
-
-          </div>
-          <div class="col-xs-4 columna-imagen-triage">
-
-            <img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer">
-
-          </div>
-          <div class="col-xs-4 columna-imagen-triage">
-
-            <img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer">
-
-          </div>
+      <div class="row">
+        <div class="col-xs-12" align="center">
+          <h2 style="margin-bottom: -16px; margin-top: 40px; color: #545454;">Elige el tipo de Triage</h2>
         </div>
-
-        <div >
-          <div class="circulo {{ !vm.escogido ? '' : 'circulo2' }}">
-
-          </div>
-        </div>
-
       </div>
 
-      <!--Informacion basica-->
-      <div ng-if="vm.view == 'informacionBasica'">
+      <div class="row p-r-25">
 
-        <div class="col-xs-3">
+        <div class="col-xs-4 columna-imagen-triage">
 
-          <div class="r-s-foto">
-            <img src="img/img-profile-M.png" alt="" class="r-s-fotoPatient">
-          </div>
+          <img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer"
+               ng-click="vm.abrirTriage()">
 
         </div>
+        <div class="col-xs-4 columna-imagen-triage">
 
-        <div class="col-xs-9">
+          <img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer">
 
-          <div class="row r-s-filas-formulario">
-            <div class="col-xs-6">
+        </div>
+        <div class="col-xs-4 columna-imagen-triage">
 
-              <span>Nombres</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required autofocus ng-model="vm.patientInfo.nombres">
-              </div>
-
-            </div>
-
-            <div class="col-xs-6">
-
-              <span>Apellidos</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientInfo.apellidos">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row r-s-filas-formulario">
-            <div class="col-xs-6">
-
-              <span>Edad</span>
-              <div class="fg-line m-l-10">
-                <input type="number" class="form-control" required ng-model="vm.patientInfo.edad">
-              </div>
-
-            </div>
-
-            <div class="col-xs-6">
-
-              <span>Genero</span>
-
-              <div class="row">
-
-                <div class="col-xs-6">
-                  <div class="radio">
-                    <label>
-                      <input class="form-control" type="radio" name="genero" value="M" ng-model="vm.patientInfo.genero">
-                      <i class="input-helper"></i>
-                      Masculino
-                    </label>
-                  </div>
-                </div>
-
-                <div class="col-xs-6">
-                  <div class="radio">
-                    <label>
-                      <input class="form-control" type="radio" name="genero" value="F" ng-model="vm.patientInfo.genero">
-                      <i class="input-helper"></i>
-                      Femenino
-                    </label>
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row r-s-filas-formulario">
-            <div class="col-xs-6">
-
-              <span>Fecha Nacimiento</span>
-              <div class="fg-line m-l-10">
-                <input type="date" class="form-control" required ng-model="vm.patientInfo.fechaNacimiento">
-              </div>
-
-            </div>
-
-            <div class="col-xs-6">
-
-              <span>Clave del seguro</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientInfo.claveSeguro">
-              </div>
-
-            </div>
-          </div>
-
-          <div class="row r-s-filas-formulario">
-            <div class="col-xs-6">
-
-              <span>Tipo de sangre</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientInfo.tipoSangre">
-              </div>
-
-            </div>
-
-            <div class="col-xs-6">
-
-              <span>Alergias</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientInfo.alergias">
-              </div>
-
-            </div>
-          </div>
+          <img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer">
 
         </div>
 
       </div>
 
-      <!--Registrar sintomas-->
-      <div ng-if="vm.view == 'sintomas'">
+    </div>
 
-        <div class="col-xs-4">
 
-          <div class="row r-s-rows" style="margin-top: 0px">
-            <div class="col-xs-12">
-              <span>Pulso</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required autofocus ng-model="vm.patientDetails.pulso">
+    <form name="pacienteForm" id="form" ng-submit="" ng-show="vm.escogido" class="circulo {{ !vm.escogido ? '' : 'circulo2' }}  {{ vm.elegirTriage ? 'back' : '' }}">
+
+      <!--Header-->
+      <div ng-if="vm.mostrarModal" class="modal-header r-s-header">
+
+        <ul class="tab-nav">
+
+          <li class="r-s-close-icon">
+            <span class="zmdi zmdi-close cursor-pointer" ng-click="vm.closeModalofRegisterSymptom()"></span>
+          </li>
+
+          <!--<li class="{{vm.view == 'triage' ? 'active' : ''}}">-->
+            <!--<a href="" ng-click="vm.view = 'triage'">-->
+              <!--<img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"-->
+                   <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">-->
+              <!--Triage-->
+            <!--</a>-->
+          <!--</li>-->
+
+          <li class="{{vm.view == 'informacionBasica' ? 'active' : ''}}">
+            <a href="" ng-click="vm.view = 'informacionBasica'" style="color: #ffffff;">
+              <img class="r-s-i-icon" style="color: white;  {{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }} "
+                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
+              Informacion basica
+            </a>
+          </li>
+
+          <li class="{{vm.view == 'sintomas' ? 'active' : ''}}">
+            <a href="" ng-click="vm.view = 'sintomas'" style="color: #ffffff;">
+              <img class="r-s-s-icon" style="color: white; {{ vm.view == 'sintomas' ? '': 'color: #7a7a7a !important' }}"
+                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACbUlEQVRoQ+1Z7TEFQRDsFwEiQASIABEgAmRABIgAESACRIAIEAEiQARUV+1WjbndvY+d23unbn4979xt9/R83pth5DYbOX5MBIZWMKbACoBzAOsA+HlIewfwAuAYAD//sRABAn4GsDgk6sDZXwA2NIkQgTsAO3MG3sO5B7ArsYUIfM6h9z1mhtBqHYGfBmFWUqAknpACEwFjeSYFmnTrawD7wvNN7mkqVBEFdOVivWbzsbDeCbAu3yqk2wAeLdAD6J2ADh/iZtu/GAMBjhsMH21nAE7HQOAAwFUAaKXlZ5DpNYRic9MTgK0M0PLW3gjEwscfblVKeyNw5HaGmKNTBDiynwBgCCbn/T6rEHcGLjwxi5XS2L4RnPctCEiALJmHbkt7U8g/ACyL7zyBWKKHiIeSPzuE9EGeAEPAG5OWjUt+50vpQ4uErsz71gp4wJRbrpwhUpeumWmlUsWJKuod3FyBEIAllw/0tlSFHpVDXl1l7SWEWE1ScXzjrrPuSwIc5uhNrRRDjdcWFJtv5wT95iFbAV8OY2VzDwAbGk0fJjESoCdDYhw1qA7DhoT4/MprE4sckPVcD24SVB2BrvORmQLem/TWmvvDh4+/xvDYjAQ63yaEPFyXF+YEUgfGZiNNtA60vF6UAONa9gIPJGfBKUoglOivNSNHnRpFCehSSnBsckz+rlaUAIc7DnneWKVYMtm5u1pRArqUdi2dgyVxVy+n7iuugDWJiYDVbttVmdYKsGLoSbHr4db3VfaFf/kTE+t2aF639mbb5wX3hdTPrHy3ycYkF/W2h1r8f3JfGDpBswlOBLJdmPmA0SvwCxNSqDGUSGaRAAAAAElFTkSuQmCC">
+              Sintomas
+            </a>
+          </li>
+
+          <!--<li class="{{vm.view == 'vistaPrevia' ? 'active' : ''}}">-->
+          <!--<a href="" ng-click="vm.view = 'vistaPrevia'">-->
+          <!--<img class="r-s-v-icon" style="{{ vm.view == 'vistaPrevia' ? '': 'color: #7a7a7a !important' }}"-->
+          <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC3klEQVRoQ+2Yj1FUMRDGv6sAqUCoAKlArUCpAKhArQCtQK1AqQCpAKxAqQCoAK1A54eJE3L5s3m5x83NZGfezIPbbPbb/XY3eQttuCw23H8NAOvO4MjAyEBnBAaFOgPYvXxkIAjhjqRXkp5J4v1FFN5LSTeSfko6d+9rz8ATSYeS3jqnWxwCzCdJp5J+tSwMdadSCMffOMd57xGcB8jnKUCmAMDx95J6HY9BAwS7ADFLCwB4/SXB7XgzKAHf4ToPQl3wUBdQriSsPbbWiBXAa+d8KeoUJrUAt0tCIKAMBZ8TsgGIb7VUWAB8dI6VbLHZ19pm0e9HLiilZQB9V1KoAYAybLRq5709CwgCQ4CSkgMAVS4cb0vOQxvo1SPQpEQnbFMXB6kulQJgdR7DuxnOA4pu5YcZDnxwjsRgqYlrQwRoCC9jECkAFtqwH90mRa/SekDQKmOBJrXuxJolOsUArM5jLFW4RP6sEk2iSEZCsdSC138AIgTQYgRj+0Gf98Zx7HkFwPfELGFG/DDQyKv8D14I4K5xuqbo98foRM9atmBObPMSGuKfW0YH4rV+2WMB+O2DvQ4KpVrvSijkq9zSDdClL8ej/jGK+EH3S3HR2tJybZQ2eZKhYm8bXdozN8joJnuGesgNMgYYQHxHovPwd9w+2cI6yK5SJ4PSUcICAgpBpR5hbtSOIwQAnaWbW+0wZ6HTlJOoB2yZPTmq3tuoAUCHIy3nmpJMAWFxntsZd4ysWACwmPSRjdKcgE6c3S0XGu4YJdrQ5wG4kguNR0+xAaJ2VECH+qHowislTYHirt0v4Ds6tUCYKRSnj5TSUVqmtqXIiTp2oaxZrBSKDXJnAAhPLxAcx2me5u9DUwF4QAAh3QB5ag7bP8Vb5zSUa3bc79ULIPSZGqEw/afFuFbgtv+0SHGaOF4LyioB1Paa5fcBYJawNhgdGWgI1iyqIwOzhLXB6MhAQ7BmUd34DPwFmn+PMQdvLz8AAAAASUVORK5CYII=">-->
+          <!--Vista previa-->
+          <!--</a>-->
+          <!--</li>-->
+
+          <li class="r-s-boton-siguiente">
+            <a href="" ng-click="vm.nextInModalOfRegisterSymptom(vm.view)" class="r-s-b-siguiente">{{ vm.view ==
+              'sintomas'
+              ? 'Terminar' : 'Siguiente' }}</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <!--Body-->
+      <div ng-if="vm.mostrarModal" class="modal-body modal-size p-l-15 p-r-15">
+
+        <div class="row">
+
+          <!--Informacion basica-->
+          <div ng-if="vm.view == 'informacionBasica'">
+
+            <div class="col-xs-3">
+
+              <div class="r-s-foto">
+                <img src="img/img-profile-M.png" alt="" class="r-s-fotoPatient">
               </div>
+
             </div>
-          </div>
 
-          <div class="row r-s-rows">
-            <div class="col-xs-12">
-              <span>Presion arterial sintolica</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientDetails.presionSintolica">
-              </div>
-            </div>
-          </div>
+            <div class="col-xs-9">
 
-          <div class="row r-s-rows">
-            <div class="col-xs-12">
-              <span>Presion arterial diastólica</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientDetails.presionDiastolica">
-              </div>
-            </div>
-          </div>
+              <div class="row r-s-filas-formulario">
+                <div class="col-xs-6">
 
-          <div class="row r-s-rows">
-            <div class="col-xs-12">
-              <span>Temperatura</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientDetails.temperatura">
-              </div>
-            </div>
-          </div>
+                  <span style="color: #ffffff;">Nombres</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="p-l-5 form-control" required autofocus ng-model="vm.patientInfo.nombres">
+                  </div>
 
-          <div class="row r-s-rows">
-            <div class="col-xs-12">
-              <span>spO2</span>
-              <div class="fg-line m-l-10">
-                <input type="text" class="form-control" required ng-model="vm.patientDetails.spO2">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="col-xs-4">
-
-          <div class="row">
-            <div class="col-xs-12">
-              <span>Selecciona los sintomas</span>
-              <div class="fg-line m-l-10">
-
-                <select class="form-control" ng-options="item.nombre for item in vm.listSymptoms" ng-model="vm.symptom"
-                        ng-change="vm.addSymptom(vm.symptom)">
-
-                </select>
-
-              </div>
-            </div>
-          </div>
-
-          <div class="row m-t-15" style="    height: 300px;overflow-y: auto;overflow-x: hidden;">
-            <div class="col-xs-12 p-r-0">
-
-              <div class="row" ng-if="vm.symptoms.length == 0" align="center">
-                <div class="zmdi zmdi-quote m-t-20 not-found-quote">
                 </div>
-                <div class="not-found">No hay</div>
-                <div class="m-b-30 not-found">Sintomas</div>
+
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Apellidos</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.apellidos">
+                  </div>
+
+                </div>
               </div>
 
-              <table class="table table-hover table-sintomas">
+              <div class="row r-s-filas-formulario">
+                <div class="col-xs-6">
 
-                <tbody>
+                  <span style="color: #ffffff;">Edad</span>
+                  <div class="fg-line m-l-10">
+                    <input type="number" class="p-l-5 form-control" required ng-model="vm.patientInfo.edad">
+                  </div>
 
-                <tr ng-repeat="sintoma in vm.symptoms track by $index">
-                  <td class="r-s-columnas">
-                    <div
-                      class="{{ sintoma.nivel == 'v' ? 'r-s-s-v' : (sintoma.nivel == 'n' ? 'r-s-s-n' : 'r-s-s-r') }}">
-                      <div class="row">
-                        <div class="col-xs-9 r-s-a-s">
-                          {{ sintoma.nombre }}
-                        </div>
-                        <div class="col-xs-2 r-s-a-s-r">
-                          <img class="r-s-trash-icon cursor-pointer" ng-click="vm.removeItem(vm.symptoms, $index)"
-                               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABQUlEQVRoQ+1Z7W3CUAy8m6AjwAjdpIxAN+gobEBHoJt0BNgAJnD1pARVUZFt6vAUdPlr5/k+7BcjiIU/XDh+iEBvB+XAUzlgZlsAe4fUJ8n3KuJlLRQEP+IuIxEmYGZWpVrkHJIhbKGkVlAEIrL/ypEDScG6pYdnoBtCp3CawNzDHO39kZcIVLeWHPAU1Qx4t0pwhSgf4mnvTp3y4ldAIuBYfGsGPIW9uBzwbp8xLgcGJaJCeMKWrRJej3txzYBnlWZg8oHSDAwtoSG+dXtoFwreKmohtdCkVbr9JvZWBS/efZUIzpyb1s0BF1kw4REEzgBegniyaSeS68xL91yjBwBvmSKJ3C+Sm0R+/n9iM2sKfc/gwgXAK8njrATa4QOJXSsIYJUp+EfuaRDkIwu+nZVuoX+CLX9dBMolTR64eAd+APwQKUB3Y01CAAAAAElFTkSuQmCC">
-                        </div>
+                </div>
+
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Genero</span>
+
+                  <div class="row">
+
+                    <div class="col-xs-6">
+                      <div class="radio">
+                        <label style="color: #ffffff;">
+                          <input class="form-control" type="radio" name="genero" value="M"
+                                 ng-model="vm.patientInfo.genero">
+                          <i class="input-helper"></i>
+                          Masculino
+                        </label>
                       </div>
                     </div>
-                  </td>
-                </tr>
 
-                </tbody>
+                    <div class="col-xs-6">
+                      <div class="radio">
+                        <label style="color: #ffffff;">
+                          <input class="form-control" type="radio" name="genero" value="F"
+                                 ng-model="vm.patientInfo.genero">
+                          <i class="input-helper"></i>
+                          Femenino
+                        </label>
+                      </div>
+                    </div>
 
-              </table>
-            </div>
-          </div>
+                  </div>
 
-        </div>
-
-        <div class="col-xs-4">
-
-          <div class="row r-s-rows" style="margin-top: 0px">
-            <div class="col-xs-12">
-              <span>Requiere</span>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Rayos X')"
-                         ng-checked="vm.verifyChecked('rayosX') > -1">
-                  <i class="input-helper"></i>
-                  Rayos x
-                </label>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Sala de choque')"
-                         ng-checked="vm.verifyChecked('salaChoque') > -1">
-                  <i class="input-helper"></i>
-                  Sala de choque
-                </label>
+              <div class="row r-s-filas-formulario">
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Fecha Nacimiento</span>
+                  <div class="fg-line m-l-10">
+                    <input type="date" class="p-l-5 form-control" required ng-model="vm.patientInfo.fechaNacimiento">
+                  </div>
+
+                </div>
+
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Clave del seguro</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.claveSeguro">
+                  </div>
+
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Analisis clinicos')"
-                         ng-checked="vm.verifyChecked('analisisClinicos') > -1">
-                  <i class="input-helper"></i>
-                  Analisis clinicos
-                </label>
+              <div class="row r-s-filas-formulario">
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Tipo de sangre</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.tipoSangre">
+                  </div>
+
+                </div>
+
+                <div class="col-xs-6">
+
+                  <span style="color: #ffffff;">Alergias</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.alergias">
+                  </div>
+
+                </div>
               </div>
+
             </div>
+
           </div>
 
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Tomografia')"
-                         ng-checked="vm.verifyChecked('tomografia') > -1">
-                  <i class="input-helper"></i>
-                  Tomografia
-                </label>
+          <!--Registrar sintomas-->
+          <div ng-if="vm.view == 'sintomas'">
+
+            <div class="col-xs-4">
+
+              <div class="row r-s-rows" style="margin-top: 0px">
+                <div class="col-xs-12">
+                  <span>Pulso</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="form-control" required autofocus ng-model="vm.patientDetails.pulso">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Ultrasonido')"
-                         ng-checked="vm.verifyChecked('ultrasonido') > -1">
-                  <i class="input-helper"></i>
-                  Ultrasonido
-                </label>
+              <div class="row r-s-rows">
+                <div class="col-xs-12">
+                  <span>Presion arterial sintolica</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="form-control" required ng-model="vm.patientDetails.presionSintolica">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="checkbox m-b-15 r-s-necesita-rows">
-                <label>
-                  <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Cirugia')"
-                         ng-checked="vm.verifyChecked('cirugia') > -1">
-                  <i class="input-helper"></i>
-                  Cirugia
-                </label>
+              <div class="row r-s-rows">
+                <div class="col-xs-12">
+                  <span>Presion arterial diastólica</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="form-control" required ng-model="vm.patientDetails.presionDiastolica">
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
 
-          <div class="row m-t-20">
-            <div class="col-xs-12" style="padding-right: 40px;">
-              <span>Observacioes</span>
-              <div class="fg-line m-l-10">
+              <div class="row r-s-rows">
+                <div class="col-xs-12">
+                  <span>Temperatura</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="form-control" required ng-model="vm.patientDetails.temperatura">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row r-s-rows">
+                <div class="col-xs-12">
+                  <span>spO2</span>
+                  <div class="fg-line m-l-10">
+                    <input type="text" class="form-control" required ng-model="vm.patientDetails.spO2">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xs-4">
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <span>Selecciona los sintomas</span>
+                  <div class="fg-line m-l-10">
+
+                    <select class="form-control" ng-options="item.nombre for item in vm.listSymptoms"
+                            ng-model="vm.symptom"
+                            ng-change="vm.addSymptom(vm.symptom)">
+
+                    </select>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="row m-t-15" style="    height: 300px;overflow-y: auto;overflow-x: hidden;">
+                <div class="col-xs-12 p-r-0">
+
+                  <div class="row" ng-if="vm.symptoms.length == 0" align="center">
+                    <div class="zmdi zmdi-quote m-t-20 not-found-quote">
+                    </div>
+                    <div class="not-found">No hay</div>
+                    <div class="m-b-30 not-found">Sintomas</div>
+                  </div>
+
+                  <table class="table table-hover table-sintomas">
+
+                    <tbody>
+
+                    <tr ng-repeat="sintoma in vm.symptoms track by $index">
+                      <td class="r-s-columnas">
+                        <div
+                          class="{{ sintoma.nivel == 'v' ? 'r-s-s-v' : (sintoma.nivel == 'n' ? 'r-s-s-n' : 'r-s-s-r') }}">
+                          <div class="row">
+                            <div class="col-xs-9 r-s-a-s">
+                              {{ sintoma.nombre }}
+                            </div>
+                            <div class="col-xs-2 r-s-a-s-r">
+                              <img class="r-s-trash-icon cursor-pointer" ng-click="vm.removeItem(vm.symptoms, $index)"
+                                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABQUlEQVRoQ+1Z7W3CUAy8m6AjwAjdpIxAN+gobEBHoJt0BNgAJnD1pARVUZFt6vAUdPlr5/k+7BcjiIU/XDh+iEBvB+XAUzlgZlsAe4fUJ8n3KuJlLRQEP+IuIxEmYGZWpVrkHJIhbKGkVlAEIrL/ypEDScG6pYdnoBtCp3CawNzDHO39kZcIVLeWHPAU1Qx4t0pwhSgf4mnvTp3y4ldAIuBYfGsGPIW9uBzwbp8xLgcGJaJCeMKWrRJej3txzYBnlWZg8oHSDAwtoSG+dXtoFwreKmohtdCkVbr9JvZWBS/efZUIzpyb1s0BF1kw4REEzgBegniyaSeS68xL91yjBwBvmSKJ3C+Sm0R+/n9iM2sKfc/gwgXAK8njrATa4QOJXSsIYJUp+EfuaRDkIwu+nZVuoX+CLX9dBMolTR64eAd+APwQKUB3Y01CAAAAAElFTkSuQmCC">
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+
+                    </tbody>
+
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-xs-4">
+
+              <div class="row r-s-rows" style="margin-top: 0px">
+                <div class="col-xs-12">
+                  <span>Requiere</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Rayos X')"
+                             ng-checked="vm.verifyChecked('rayosX') > -1">
+                      <i class="input-helper"></i>
+                      Rayos x
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Sala de choque')"
+                             ng-checked="vm.verifyChecked('salaChoque') > -1">
+                      <i class="input-helper"></i>
+                      Sala de choque
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Analisis clinicos')"
+                             ng-checked="vm.verifyChecked('analisisClinicos') > -1">
+                      <i class="input-helper"></i>
+                      Analisis clinicos
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Tomografia')"
+                             ng-checked="vm.verifyChecked('tomografia') > -1">
+                      <i class="input-helper"></i>
+                      Tomografia
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Ultrasonido')"
+                             ng-checked="vm.verifyChecked('ultrasonido') > -1">
+                      <i class="input-helper"></i>
+                      Ultrasonido
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="checkbox m-b-15 r-s-necesita-rows">
+                    <label>
+                      <input type="checkbox" value="" ng-click="vm.addOrDeleteItemInAssignment('Cirugia')"
+                             ng-checked="vm.verifyChecked('cirugia') > -1">
+                      <i class="input-helper"></i>
+                      Cirugia
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row m-t-20">
+                <div class="col-xs-12" style="padding-right: 40px;">
+                  <span>Observacioes</span>
+                  <div class="fg-line m-l-10">
                 <textarea class="form-control p-t-10"
                           rows="8"
                           cols="40"
                           placeholder="Escriba aquí..."
                           ng-model="vm.observaciones"
                           required></textarea>
+                  </div>
+                </div>
               </div>
+
             </div>
+
           </div>
 
+          <!--Vista previa-->
+          <div ng-if="vm.view == 'vistaPrevia'">
+
+          </div>
         </div>
-
       </div>
-
-      <!--Vista previa-->
-      <div ng-if="vm.view == 'vistaPrevia'">
-
-
-      </div>
-
-    </div>
+    </form>
 
   </div>
-</form>
-

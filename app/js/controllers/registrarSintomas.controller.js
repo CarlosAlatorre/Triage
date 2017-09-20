@@ -7,33 +7,35 @@ triage
       vm.symptoms = [];
       vm.requerimientos = [];
       vm.listSymptoms = [{
-        'nombre' : 'Tos',
-        'nivel' : 'v'
-      },{
-        'nombre' : 'Tossss',
-        'nivel' : 'r'
-      },{
-        'nombre' : 'Diarrea',
-        'nivel' : 'n'
-      },{
-        'nombre' : 'Tosasd',
-        'nivel' : 'v'
-      },{
-        'nombre' : 'Tosasd',
-        'nivel' : 'v'
-      },{
-        'nombre' : 'Tosdsa',
-        'nivel' : 'v'
-      },{
-        'nombre' : 'Tosdsdsds',
-        'nivel' : 'v'
+        'nombre': 'Tos',
+        'nivel': 'v'
+      }, {
+        'nombre': 'Tossss',
+        'nivel': 'r'
+      }, {
+        'nombre': 'Diarrea',
+        'nivel': 'n'
+      }, {
+        'nombre': 'Tosasd',
+        'nivel': 'v'
+      }, {
+        'nombre': 'Tosasd',
+        'nivel': 'v'
+      }, {
+        'nombre': 'Tosdsa',
+        'nivel': 'v'
+      }, {
+        'nombre': 'Tosdsdsds',
+        'nivel': 'v'
       }
       ]
       vm.patientInfo = {};
       vm.parent = $scope.$parent.vm;
-      vm.view = 'triage';
+      vm.view = 'informacionBasica';
       vm.patientDetails = {};
       vm.escogido = false;
+      vm.mostrarModal = false;
+      vm.elegirTriage = false;
 
 
       //public functions
@@ -43,6 +45,7 @@ triage
       vm.verifyChecked = verifyChecked;
       vm.addSymptom = addSymptom;
       vm.removeItem = removeItem;
+      vm.abrirTriage = abrirTriage;
 
       //private functions
       function activate() {
@@ -51,6 +54,10 @@ triage
           vm.patientInfo = response;
         })
 
+        $timeout(function () {
+          vm.elegirTriage = true;
+        }, 1700)
+
       }
 
       activate();
@@ -58,9 +65,9 @@ triage
       function nextInModalOfRegisterSymptom(view) {
         switch (view) {
 
-          case 'triage':
-            vm.view = 'informacionBasica';
-            break;
+          // case 'triage':
+          //   vm.view = 'informacionBasica';
+          //   break;
 
           case 'informacionBasica':
             vm.view = 'sintomas';
@@ -115,6 +122,15 @@ triage
         array.splice(index, 1);
       }
 
+      function abrirTriage() {
+        if(vm.elegirTriage) {
+          vm.escogido = !vm.escogido;
+
+          $timeout(function () {
+            vm.mostrarModal = true;
+          }, 1000)
+        }
+      }
 
     }
   ]);

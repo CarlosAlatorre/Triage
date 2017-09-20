@@ -423,7 +423,7 @@
 }
 
 .r-s-boton-siguiente{
-  margin-left: 60px;
+  margin-left: 205px;
   background-color: #3498db;
 }
 
@@ -7977,7 +7977,7 @@
 
 
 .r-s-boton-siguiente{
-  margin-left: 144px;
+  margin-left: 205px;
   background-color: #3498db;
 
 }
@@ -8417,7 +8417,7 @@
 }
 
 .r-s-boton-siguiente{
-  margin-left: 60px;
+  margin-left: 205px;
   background-color: #3498db;
 
 }
@@ -8593,14 +8593,22 @@
 .circulo{
   width: 50px;
   height: 50px;
-  background: #676470;
-  transition: all 1s ease;
+  background: transparent;
+  transition: margin-top 1s ease, margin-left 1s ease, width 1s ease, height 1s ease, border-radius 1s ease;
   border-radius: 100%;
   position: absolute;
-  margin: auto;
+  margin-top: 22%;
+  margin-left: 11%;
+}
+
+.back{
+  background: #f48fb1;
 }
 
 .circulo2{
   width:700px;
-  height:400px;
+  height:450px;
+  border-radius: 0%;
+  margin-top: 0%;
+  margin-left: 0%;
 }
