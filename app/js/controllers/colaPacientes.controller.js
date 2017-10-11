@@ -45,7 +45,7 @@ triage
 
       function openRegisterSymptom() {
 
-        if(vm.patientKey != '') {
+        // if(vm.patientKey != '') {
 
           vm.modalRegisterSymptom = $uibModal.open({
             animation: true,
@@ -55,9 +55,9 @@ triage
             size: 'lm',
             backdrop: 'static'
           });
-        }else{
-          alertService.error('Error al registrar paciente', 'Introduzca primero el numero de clave del paciente')
-        }
+        // }else{
+        //   alertService.error('Error al registrar paciente', 'Introduzca primero el numero de clave del paciente')
+        // }
       }
 
       function openPatientDetails(patientQueueKey) {
@@ -87,6 +87,42 @@ triage
             $rootScope.$applyAsync();
 
           })
+        //
+        // vm.patientQueue[0] = {
+        //   'nombre': 'Carlos Alatorre',
+        //   'claveSeguro': '13330414',
+        //   'sintomas': {
+        //     '0': {
+        //       'nombre': 'Tos'
+        //     }
+        //   },
+        //   'tiempoEnCola': 1550000000,
+        //   'nivelEmergencia': 'v'
+        // }
+        //
+        // vm.patientQueue[1] = {
+        //   'nombre': 'Carlos Alatorre',
+        //   'claveSeguro': '13330414',
+        //   'sintomas': {
+        //     '0': {
+        //       'nombre': 'Tos'
+        //     }
+        //   },
+        //   'tiempoEnCola': 1550000000,
+        //   'nivelEmergencia': 'r'
+        // }
+        //
+        // vm.patientQueue[2] = {
+        //   'nombre': 'Carlos Alatorre',
+        //   'claveSeguro': '13330414',
+        //   'sintomas': {
+        //     '0': {
+        //       'nombre': 'Tos'
+        //     }
+        //   },
+        //   'tiempoEnCola': 1550000000,
+        //   'nivelEmergencia': 'v'
+        // }
       }
 
       function registrarSintoma(sintoma) {

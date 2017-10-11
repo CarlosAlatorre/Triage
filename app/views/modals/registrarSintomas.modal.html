@@ -1,50 +1,52 @@
-<div style="height: 450px; width: 700px">
+<!--<div style="height: 450px; width: 700px">-->
 
-  <div class="col-lg-offset-5 col-lg-6" style="margin-top: 20%" ng-if="!vm.elegirTriage">
-    <div class="preloader pls-blue pl-xl" align="center">
-      <svg class="pl-circular" viewBox="25 25 50 50">
-        <circle class="plc-path" cx="50" cy="50" r="20"></circle>
-      </svg>
-    </div>
-  </div>
+  <!--<div class="col-lg-offset-5 col-lg-6" style="margin-top: 20%" ng-if="!vm.elegirTriage">-->
+    <!--<div class="preloader pls-blue pl-xl" align="center">-->
+      <!--<svg class="pl-circular" viewBox="25 25 50 50">-->
+        <!--<circle class="plc-path" cx="50" cy="50" r="20"></circle>-->
+      <!--</svg>-->
+    <!--</div>-->
+  <!--</div>-->
 
   <!--Tipo de triage-->
-    <div ng-show="!vm.escogido" ng-if="vm.elegirTriage">
+    <!--<div ng-show="!vm.escogido" ng-if="vm.elegirTriage">-->
 
-      <div class="row">
-        <div class="col-xs-12" align="center">
-          <h2 style="margin-bottom: -16px; margin-top: 40px; color: #545454;">Elige el tipo de Triage</h2>
-        </div>
-      </div>
+      <!--<div class="row">-->
+        <!--<div class="col-xs-12" align="center">-->
+          <!--<h2 style="margin-bottom: -16px; margin-top: 40px; color: #545454;">Elige el tipo de Triage</h2>-->
+        <!--</div>-->
+      <!--</div>-->
 
-      <div class="row p-r-25">
+      <!--<div class="row p-r-25">-->
 
-        <div class="col-xs-4 columna-imagen-triage">
+        <!--<div class="col-xs-4 columna-imagen-triage">-->
 
-          <img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer"
-               ng-click="vm.abrirTriage()">
+          <!--<img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer"-->
+               <!--ng-click="vm.abrirTriage()">-->
 
-        </div>
-        <div class="col-xs-4 columna-imagen-triage">
+        <!--</div>-->
+        <!--<div class="col-xs-4 columna-imagen-triage">-->
 
-          <img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer">
+          <!--<img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer">-->
 
-        </div>
-        <div class="col-xs-4 columna-imagen-triage">
+        <!--</div>-->
+        <!--<div class="col-xs-4 columna-imagen-triage">-->
 
-          <img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer">
+          <!--<img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer">-->
 
-        </div>
+        <!--</div>-->
 
-      </div>
+      <!--</div>-->
 
-    </div>
+    <!--</div>-->
 
 
-    <form name="pacienteForm" id="form" ng-submit="" ng-show="vm.escogido" class="circulo {{ !vm.escogido ? '' : 'circulo2' }}  {{ vm.elegirTriage ? 'back' : '' }}">
+    <!--<form name="pacienteForm" id="form" ng-submit="" ng-show="vm.escogido" class="circulo {{ !vm.escogido ? '' : 'circulo2' }}  {{ vm.elegirTriage ? 'back' : '' }}">-->
+    <form name="pacienteForm" id="form" ng-submit="" class="">
 
       <!--Header-->
-      <div ng-if="vm.mostrarModal" class="modal-header r-s-header">
+      <!--<div ng-if="vm.mostrarModal" class="modal-header r-s-header">-->
+      <div class="modal-header r-s-header">
 
         <ul class="tab-nav">
 
@@ -52,24 +54,24 @@
             <span class="zmdi zmdi-close cursor-pointer" ng-click="vm.closeModalofRegisterSymptom()"></span>
           </li>
 
-          <!--<li class="{{vm.view == 'triage' ? 'active' : ''}}">-->
-            <!--<a href="" ng-click="vm.view = 'triage'">-->
-              <!--<img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"-->
-                   <!--src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">-->
-              <!--Triage-->
-            <!--</a>-->
-          <!--</li>-->
+          <li class="{{vm.view == 'triage' ? 'active' : ''}}">
+            <a href="" ng-click="vm.view = 'triage'">
+              <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }}"
+                   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
+              Triage
+            </a>
+          </li>
 
           <li class="{{vm.view == 'informacionBasica' ? 'active' : ''}}">
-            <a href="" ng-click="vm.view = 'informacionBasica'" style="color: #ffffff;">
-              <img class="r-s-i-icon" style="color: white;  {{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }} "
+            <a href="" ng-click="vm.view = 'informacionBasica'" style="">
+              <img class="r-s-i-icon" style="{{ vm.view == 'informacionBasica' ? '': 'color: #7a7a7a !important' }} "
                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAB/UlEQVRoQ+1Y7TFEQRDsi4AQiMCJABkQgRCcDGSACBABGSACJwJCkAHVvFVra5+dj33Wq9qtUn7c7Ex3z8fN3gIzP4uZ40cn0DqDPQM9A04FegkB2AJwAmAfwHIQdA3gAcAlgFenyL9e92bgHMCqAPACwOlUJDwEniLFS/iYkd2SkeVzKwGqyrLRHJZTKVsaf5+2FgKs+Rd1pK8L21FPXAM4Nvj5gdlCwKJ+wBln4RDAbQsCmtpP8cW9wIlFX9rjzsC7NmJiHwOw+PpXBJxa2JqYZbBjjPysGL2iEC2bWASwZGQhUGuMlrCJPrcQoGPLKI1H6ObwXcL/2uNu4hBQ0wtp7VsECHGrEZBmIl0hrPN/EgJ0yp7gjsN1OkwnKs51mkrH6zTB3wOwlM5kBLQ1XNXe2sRVQXicdQIe9WrctWaATbiXvIPZzPzjYeOG5g3v40cAbxnQXKv5NtgQEnKNUT5AOHHC410Y89uMZDiZbpKLFIRTS7JjmQgQ+FmksBZ4as/s0F9KRPJKUxFgSVwNpeIFnbtP1Y+S0iqREBOo8aUjIc2+OADA8lKfsSb+K/ABsJlEjoBnU1QrGF0gCf5qkZtUo35zBLircK9pce6GnhDHzhGwPLTFAQWGqu+mTkCgqNakZ0CrWFN7VbqaIh0J3gm0zkrPQM+AU4HZl9AHBHVMMagTeQ0AAAAASUVORK5CYII=">
               Informacion basica
             </a>
           </li>
 
           <li class="{{vm.view == 'sintomas' ? 'active' : ''}}">
-            <a href="" ng-click="vm.view = 'sintomas'" style="color: #ffffff;">
+            <a href="" ng-click="vm.view = 'sintomas'" style="">
               <img class="r-s-s-icon" style="color: white; {{ vm.view == 'sintomas' ? '': 'color: #7a7a7a !important' }}"
                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACbUlEQVRoQ+1Z7TEFQRDsFwEiQASIABEgAmRABIgAESACRIAIEAEiQARUV+1WjbndvY+d23unbn4979xt9/R83pth5DYbOX5MBIZWMKbACoBzAOsA+HlIewfwAuAYAD//sRABAn4GsDgk6sDZXwA2NIkQgTsAO3MG3sO5B7ArsYUIfM6h9z1mhtBqHYGfBmFWUqAknpACEwFjeSYFmnTrawD7wvNN7mkqVBEFdOVivWbzsbDeCbAu3yqk2wAeLdAD6J2ADh/iZtu/GAMBjhsMH21nAE7HQOAAwFUAaKXlZ5DpNYRic9MTgK0M0PLW3gjEwscfblVKeyNw5HaGmKNTBDiynwBgCCbn/T6rEHcGLjwxi5XS2L4RnPctCEiALJmHbkt7U8g/ACyL7zyBWKKHiIeSPzuE9EGeAEPAG5OWjUt+50vpQ4uErsz71gp4wJRbrpwhUpeumWmlUsWJKuod3FyBEIAllw/0tlSFHpVDXl1l7SWEWE1ScXzjrrPuSwIc5uhNrRRDjdcWFJtv5wT95iFbAV8OY2VzDwAbGk0fJjESoCdDYhw1qA7DhoT4/MprE4sckPVcD24SVB2BrvORmQLem/TWmvvDh4+/xvDYjAQ63yaEPFyXF+YEUgfGZiNNtA60vF6UAONa9gIPJGfBKUoglOivNSNHnRpFCehSSnBsckz+rlaUAIc7DnneWKVYMtm5u1pRArqUdi2dgyVxVy+n7iuugDWJiYDVbttVmdYKsGLoSbHr4db3VfaFf/kTE+t2aF639mbb5wX3hdTPrHy3ycYkF/W2h1r8f3JfGDpBswlOBLJdmPmA0SvwCxNSqDGUSGaRAAAAAElFTkSuQmCC">
               Sintomas
@@ -95,9 +97,42 @@
       </div>
 
       <!--Body-->
-      <div ng-if="vm.mostrarModal" class="modal-body modal-size p-l-15 p-r-15">
+      <div class="modal-body modal-size p-l-15 p-r-15">
 
         <div class="row">
+
+          <div ng-if="vm.view == 'triage'">
+
+            <div class="row">
+              <div class="col-xs-12" align="center">
+                <h2 style="margin-bottom: -16px; margin-top: 40px; color: #545454;">Elige el tipo de Triage</h2>
+              </div>
+            </div>
+
+            <div class="row p-r-25">
+
+              <div class="col-xs-4 columna-imagen-triage">
+
+                <img src="../../img/mujer.jpg" alt="" class="imagen-triage cursor-pointer"
+                     ng-click="vm.view = 'informacionBasica'">
+
+              </div>
+              <div class="col-xs-4 columna-imagen-triage">
+
+                <img src="../../img/nino.png" alt="" class="imagen-triage cursor-pointer"
+                ng-click="vm.view = 'informacionBasica'">
+
+              </div>
+              <div class="col-xs-4 columna-imagen-triage">
+
+                <img src="../../img/hombre.png" alt="" class="imagen-triage cursor-pointer"
+                ng-click="vm.view = 'informacionBasica'">
+
+              </div>
+
+            </div>
+
+          </div>
 
           <!--Informacion basica-->
           <div ng-if="vm.view == 'informacionBasica'">
@@ -115,7 +150,7 @@
               <div class="row r-s-filas-formulario">
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Nombres</span>
+                  <span style="">Nombres</span>
                   <div class="fg-line m-l-10">
                     <input type="text" class="p-l-5 form-control" required autofocus ng-model="vm.patientInfo.nombres">
                   </div>
@@ -124,7 +159,7 @@
 
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Apellidos</span>
+                  <span style="">Apellidos</span>
                   <div class="fg-line m-l-10">
                     <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.apellidos">
                   </div>
@@ -135,7 +170,7 @@
               <div class="row r-s-filas-formulario">
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Edad</span>
+                  <span style="">Edad</span>
                   <div class="fg-line m-l-10">
                     <input type="number" class="p-l-5 form-control" required ng-model="vm.patientInfo.edad">
                   </div>
@@ -144,13 +179,13 @@
 
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Genero</span>
+                  <span style="">Genero</span>
 
                   <div class="row">
 
                     <div class="col-xs-6">
                       <div class="radio">
-                        <label style="color: #ffffff;">
+                        <label style="">
                           <input class="form-control" type="radio" name="genero" value="M"
                                  ng-model="vm.patientInfo.genero">
                           <i class="input-helper"></i>
@@ -161,7 +196,7 @@
 
                     <div class="col-xs-6">
                       <div class="radio">
-                        <label style="color: #ffffff;">
+                        <label style="">
                           <input class="form-control" type="radio" name="genero" value="F"
                                  ng-model="vm.patientInfo.genero">
                           <i class="input-helper"></i>
@@ -178,7 +213,7 @@
               <div class="row r-s-filas-formulario">
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Fecha Nacimiento</span>
+                  <span style="">Fecha Nacimiento</span>
                   <div class="fg-line m-l-10">
                     <input type="date" class="p-l-5 form-control" required ng-model="vm.patientInfo.fechaNacimiento">
                   </div>
@@ -187,7 +222,7 @@
 
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Clave del seguro</span>
+                  <span style="">Clave del seguro</span>
                   <div class="fg-line m-l-10">
                     <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.claveSeguro">
                   </div>
@@ -198,7 +233,7 @@
               <div class="row r-s-filas-formulario">
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Tipo de sangre</span>
+                  <span style="">Tipo de sangre</span>
                   <div class="fg-line m-l-10">
                     <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.tipoSangre">
                   </div>
@@ -207,7 +242,7 @@
 
                 <div class="col-xs-6">
 
-                  <span style="color: #ffffff;">Alergias</span>
+                  <span style="">Alergias</span>
                   <div class="fg-line m-l-10">
                     <input type="text" class="p-l-5 form-control" required ng-model="vm.patientInfo.alergias">
                   </div>
@@ -439,4 +474,4 @@
       </div>
     </form>
 
-  </div>
+  <!--</div>-->

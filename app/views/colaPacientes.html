@@ -11,9 +11,15 @@
       <div class="col-xs-offset-3 col-xs-1 p-r-0" align="right">
         <i class="zmdi zmdi-search zmdi-hc-2x " style="padding-top: 8px;"></i>
       </div>
-      <div class="col-xs-4 p-l-0">
+      <div class="col-xs-2 p-l-0">
         <div class="fg-line m-l-10">
-          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar..." ng-model="buscador">
+          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar por nombre..." ng-model="searhByName">
+        </div>
+      </div>
+
+      <div class="col-xs-2 p-l-0">
+        <div class="fg-line m-l-10">
+          <input type="text" class="form-control" style="display: inline-block" placeholder="Buscar por clave de seguro..." ng-model="searchByKey">
         </div>
       </div>
     </div>
@@ -35,13 +41,13 @@
 
           <tbody>
 
-          <tr ng-click="vm.openPatientDetails(patient.$key)" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray | filter: buscador" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
+          <tr ng-click="vm.openPatientDetails(patient.$key)" class="cursor-pointer" ng-repeat="patient in vm.patientQueue | toArray | filter: {nombre: searhByName, claveSeguro: searchByKey}" ng-init="$last ? vm.getCountdownThePatients() : angular.noop()">
 
             <td>{{ patient.nombre }}</td>
             <td>{{ patient.claveSeguro }}</td>
             <td>
 
-              <span ng-repeat="sintoma in patient.sintomas | limitTo : 2">
+              <span ng-repeat="sintoma in patient.sintomas | toArray | limitTo : 2">
                 {{ sintoma.nombre }}<span ng-if="!$last">,</span>
               </span>
 
@@ -87,23 +93,27 @@
 
         <div class="c-p-crear-paciente" ng-click="vm.openRegisterPatient()">
 
-          <span class="c-p-label-crear">Crear nuevo paciente</span>
+          <!--<span class="c-p-label-crear">Crear nuevo paciente</span>-->
 
         </div>
 
-        <div>
+        <div ng-if="false">
           <input type="text" class="form-control" ng-model="nuevoSintoma.nombre" placeholder="Nombre del sintoma">
-          <input type="text" class="form-control" ng-model="nuevoSintoma.nivel" placeholder="Nivel de emergencia">
-          <input type="text" class="form-control" ng-model="nuevoSintoma.triage" placeholder="Tipo de triage">
+          <select name=""  id="" ng-model="nuevoSintoma.nivel" class="form-control">
+            <option selected="selected" value="">Nivel de sintoma</option>
+            <option value="az">Azul</option>
+            <option value="v">Verde</option>
+            <option value="a">Amarillo</option>
+            <option value="n">Naranja</option>
+            <option value="r">Rojo</option>
+          </select>
+          <select name="" id="" ng-model="nuevoSintoma.triage" class="form-control">
+            <option selected="selected" value="">Tipo de triage</option>
+            <option value="obstetrico">Obstetrico</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Pediatrico">Pediatrico</option>
+          </select>
 
-          <button class="btn btn-primary" ng-click="vm.registrarSintoma(nuevoSintoma)">Agregar sintoma</button>
-
-          <p class="m-t-10">Tipos de niveles de emergencia</p>
-          <p>Verde = v</p>
-          <p>Naranja = n</p>
-          <p>Rojo = r</p>
-          <p>Amarillo = a</p>
-          <p>azul = az</p>
         </div>
 
       </div>

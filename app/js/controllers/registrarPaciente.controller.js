@@ -4,7 +4,7 @@ triage
 
       //public var
       var vm = this;
-      vm.view = "ola";
+      vm.view = "triage";
       vm.parent = $scope.$parent.vm;
       vm.patientInfo = {};
 

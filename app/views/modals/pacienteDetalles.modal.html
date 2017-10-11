@@ -1,4 +1,17 @@
-<form name="pacienteForm" id="form" ng-submit="">
+<div style="height: 400px; width: 700px" ng-if="vm.isLoading">
+
+  <div class="col-lg-offset-5 col-lg-6" style="margin-top: 20%">
+    <div class="preloader pls-blue pl-xl" align="center">
+      <svg class="pl-circular" viewBox="25 25 50 50">
+        <circle class="plc-path" cx="50" cy="50" r="20"></circle>
+      </svg>
+    </div>
+  </div>
+
+</div>
+
+
+<form name="pacienteForm" id="form" ng-submit="" ng-if="!vm.isLoading">
 
   <!--Body-->
   <div class="modal-body modal-size p-l-15 p-r-15">

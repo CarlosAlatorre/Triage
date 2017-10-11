@@ -31,11 +31,12 @@ triage
       ]
       vm.patientInfo = {};
       vm.parent = $scope.$parent.vm;
-      vm.view = 'informacionBasica';
+      vm.view = 'triage';
       vm.patientDetails = {};
       vm.escogido = false;
       vm.mostrarModal = false;
       vm.elegirTriage = false;
+      vm.newPatient = false;
 
 
       //public functions
@@ -50,13 +51,13 @@ triage
       //private functions
       function activate() {
 
-        patientService.getPatient(vm.parent.patientKey).then(function (response) {
-          vm.patientInfo = response;
-        })
-
-        $timeout(function () {
-          vm.elegirTriage = true;
-        }, 1700)
+        if(vm.parent.patientKey != ''){
+          patientService.getPatient(vm.parent.patientKey).then(function (response) {
+            vm.patientInfo = response;
+          })
+        }else{
+          vm.newPatient = true;
+        }
 
       }
 
@@ -65,9 +66,9 @@ triage
       function nextInModalOfRegisterSymptom(view) {
         switch (view) {
 
-          // case 'triage':
-          //   vm.view = 'informacionBasica';
-          //   break;
+          case 'triage':
+            vm.view = 'informacionBasica';
+            break;
 
           case 'informacionBasica':
             vm.view = 'sintomas';
