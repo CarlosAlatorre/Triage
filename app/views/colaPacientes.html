@@ -70,7 +70,7 @@
           <h3 style="color: #6b6b6b;">Nuevo paciente</h3>
         </div>
 
-        <div class="card" style="background-color: #3498db; height: 150px">
+        <div class="card m-b-10" style="background-color: #3498db; height: 150px">
           <div class="row">
             <div class="col-xs-12" style="margin-top: 20px; padding-left: 35px; padding-right: 35px">
               <span style="color: white; font-size: 13px">Clave de seguro</span>
@@ -91,15 +91,15 @@
           </div>
         </div>
 
-        <div class="c-p-crear-paciente" ng-click="vm.openRegisterPatient()">
+        <div class="c-p-crear-paciente" style="text-align: center; color: #4498db;" ng-click="vm.openRegisterPatient()">
 
-          <!--<span class="c-p-label-crear">Crear nuevo paciente</span>-->
+          <span class="c-p-label-crear">Crear nuevo paciente</span>
 
         </div>
 
-        <div ng-if="false">
-          <input type="text" class="form-control" ng-model="nuevoSintoma.nombre" placeholder="Nombre del sintoma">
-          <select name=""  id="" ng-model="nuevoSintoma.nivel" class="form-control">
+        <div ng-if="true">
+          <input type="text" class="form-control" ng-model="vm.nuevoSintoma.nombre" placeholder="Nombre del sintoma">
+          <select name=""  ng-model="vm.nuevoSintoma.nivel" class="form-control">
             <option selected="selected" value="">Nivel de sintoma</option>
             <option value="az">Azul</option>
             <option value="v">Verde</option>
@@ -107,12 +107,14 @@
             <option value="n">Naranja</option>
             <option value="r">Rojo</option>
           </select>
-          <select name="" id="" ng-model="nuevoSintoma.triage" class="form-control">
+          <select name="" id="" ng-model="vm.nuevoSintoma.triage" class="form-control">
             <option selected="selected" value="">Tipo de triage</option>
             <option value="obstetrico">Obstetrico</option>
             <option value="Adulto">Adulto</option>
             <option value="Pediatrico">Pediatrico</option>
           </select>
+
+          <button class="btn btn-primary" ng-click="vm.registrarSintoma(vm.nuevoSintoma)">Agregar sintoma</button>
 
         </div>
 

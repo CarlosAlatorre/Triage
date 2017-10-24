@@ -2,8 +2,8 @@
  * Created by Toshiba on 14/02/2017.
  */
 triage
-  .controller('colaPacientesCtrl', ['patientService', '$location', '$scope', '$rootScope', 'alertService', '$uibModal', 'growl', '$timeout', 'chronoService',
-    function (patientService, $location, $scope, $rootScope, alertService, $uibModal, growl, $timeout, chronoService) {
+  .controller('colaPacientesCtrl', ['patientService', '$location', '$scope', '$rootScope', 'alertService', '$uibModal', 'growl', '$timeout', 'chronoService', 'objetService',
+    function (patientService, $location, $scope, $rootScope, alertService, $uibModal, growl, $timeout, chronoService, objetService) {
 
       //public var
       var vm = this;
@@ -12,6 +12,7 @@ triage
       vm.growl = growl;
       vm.config = {};
       vm.patientQueueKey = '';
+      vm.nuevoSintoma = {};
 
       //public functions
       vm.openRegisterPatient = openRegisterPatient;
@@ -126,7 +127,11 @@ triage
       }
 
       function registrarSintoma(sintoma) {
-        firebase.database().ref('sintomas').push(sintoma)
+        if(objetService.getObjectLength(sintoma) != 0){
+          firebase.database().ref('sintomas').push(sintoma)
+
+          vm.nuevoSintoma = {};
+        }
       }
 
       function getEmergencyColor(emergency) {

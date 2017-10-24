@@ -6,29 +6,30 @@ triage
       var vm = this;
       vm.symptoms = [];
       vm.requerimientos = [];
-      vm.listSymptoms = [{
-        'nombre': 'Tos',
-        'nivel': 'v'
-      }, {
-        'nombre': 'Tossss',
-        'nivel': 'r'
-      }, {
-        'nombre': 'Diarrea',
-        'nivel': 'n'
-      }, {
-        'nombre': 'Tosasd',
-        'nivel': 'v'
-      }, {
-        'nombre': 'Tosasd',
-        'nivel': 'v'
-      }, {
-        'nombre': 'Tosdsa',
-        'nivel': 'v'
-      }, {
-        'nombre': 'Tosdsdsds',
-        'nivel': 'v'
-      }
-      ]
+      vm.listSymptoms = {};
+      //   = [{
+      //   'nombre': 'Tos',
+      //   'nivel': 'v'
+      // }, {
+      //   'nombre': 'Tossss',
+      //   'nivel': 'r'
+      // }, {
+      //   'nombre': 'Diarrea',
+      //   'nivel': 'n'
+      // }, {
+      //   'nombre': 'Tosasd',
+      //   'nivel': 'v'
+      // }, {
+      //   'nombre': 'Tosasd',
+      //   'nivel': 'v'
+      // }, {
+      //   'nombre': 'Tosdsa',
+      //   'nivel': 'v'
+      // }, {
+      //   'nombre': 'Tosdsdsds',
+      //   'nivel': 'v'
+      // }
+      // ]
       vm.patientInfo = {};
       vm.parent = $scope.$parent.vm;
       vm.view = 'triage';
@@ -59,6 +60,12 @@ triage
           vm.newPatient = true;
         }
 
+        firebase.database().ref('sintomas')
+          .on('value', function (dataSnapshot) {
+            var data = dataSnapshot.val();
+            vm.listSymptoms = data;
+          })
+
       }
 
       activate();
@@ -75,10 +82,23 @@ triage
             break;
 
           case 'sintomas':
-            patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms, vm.requerimientos, vm.patientDetails, vm.observaciones);
-            vm.parent.growl.success('Paciente agregado a la cola!', vm.parent.config);
-            vm.parent.patientKey = '';
-            vm.parent.modalRegisterSymptom.dismiss();
+
+            firebase.database().ref('Hospital/pacientes/' + vm.patientInfo.claveSeguro)
+              .once('value', function (dataSnapshot) {
+                var data = dataSnapshot.val();
+
+                if(data == null){
+                  vm.patientInfo.fechaNacimiento = vm.patientInfo.fechaNacimiento.toString();
+                  firebase.database().ref('Hospital/pacientes/' + vm.patientInfo.claveSeguro).set(vm.patientInfo);
+                }
+
+                patientService.addPatientToTheQueue(vm.patientInfo, vm.symptoms, vm.requerimientos, vm.patientDetails, vm.observaciones);
+                vm.parent.growl.success('Paciente agregado a la cola!', vm.parent.config);
+                vm.parent.patientKey = '';
+                vm.parent.modalRegisterSymptom.dismiss();
+              })
+
+
             break;
 
         }
