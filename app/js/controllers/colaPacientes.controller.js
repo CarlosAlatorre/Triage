@@ -8,11 +8,12 @@ triage
       //public var
       var vm = this;
       vm.patientQueue = {};
-      vm.patientKey = 13330414;
+      vm.patientKey;
       vm.growl = growl;
       vm.config = {};
       vm.patientQueueKey = '';
       vm.nuevoSintoma = {};
+      vm.objectService = objetService;
 
       //public functions
       vm.openRegisterPatient = openRegisterPatient;
@@ -20,6 +21,7 @@ triage
       vm.openPatientDetails = openPatientDetails;
       vm.closeModalOfRegisterPatient = closeModalOfRegisterPatient;
       vm.getEmergencyColor = getEmergencyColor;
+      vm.deletePatientQueue = deletePatientQueue;
 
       vm.registrarSintoma = registrarSintoma;
 
@@ -48,17 +50,14 @@ triage
 
         // if(vm.patientKey != '') {
 
-          vm.modalRegisterSymptom = $uibModal.open({
-            animation: true,
-            templateUrl: 'views/modals/registrarSintomas.modal.html',
-            scope: $scope,
-            controller: "registrarSintomasCtrl as vm",
-            size: 'lm',
-            backdrop: 'static'
-          });
-        // }else{
-        //   alertService.error('Error al registrar paciente', 'Introduzca primero el numero de clave del paciente')
-        // }
+        vm.modalRegisterSymptom = $uibModal.open({
+          animation: true,
+          templateUrl: 'views/modals/registrarSintomas.modal.html',
+          scope: $scope,
+          controller: "registrarSintomasCtrl as vm",
+          size: 'lm',
+          backdrop: 'static'
+        });
       }
 
       function openPatientDetails(patientQueueKey) {
@@ -88,46 +87,13 @@ triage
             $rootScope.$applyAsync();
 
           })
-        //
-        // vm.patientQueue[0] = {
-        //   'nombre': 'Carlos Alatorre',
-        //   'claveSeguro': '13330414',
-        //   'sintomas': {
-        //     '0': {
-        //       'nombre': 'Tos'
-        //     }
-        //   },
-        //   'tiempoEnCola': 1550000000,
-        //   'nivelEmergencia': 'v'
-        // }
-        //
-        // vm.patientQueue[1] = {
-        //   'nombre': 'Carlos Alatorre',
-        //   'claveSeguro': '13330414',
-        //   'sintomas': {
-        //     '0': {
-        //       'nombre': 'Tos'
-        //     }
-        //   },
-        //   'tiempoEnCola': 1550000000,
-        //   'nivelEmergencia': 'r'
-        // }
-        //
-        // vm.patientQueue[2] = {
-        //   'nombre': 'Carlos Alatorre',
-        //   'claveSeguro': '13330414',
-        //   'sintomas': {
-        //     '0': {
-        //       'nombre': 'Tos'
-        //     }
-        //   },
-        //   'tiempoEnCola': 1550000000,
-        //   'nivelEmergencia': 'v'
-        // }
+        firebase.database().ref('Hospital/colaPacientes').push({
+
+        })
       }
 
       function registrarSintoma(sintoma) {
-        if(objetService.getObjectLength(sintoma) != 0){
+        if (objetService.getObjectLength(sintoma) != 0) {
           firebase.database().ref('sintomas').push(sintoma)
 
           vm.nuevoSintoma = {};
@@ -138,7 +104,7 @@ triage
 
         color = 'background-color: #2ecc71';
 
-        switch (emergency){
+        switch (emergency) {
 
           case 'r':
             return 'background-color: #e74c3c;';
@@ -163,6 +129,13 @@ triage
         }
 
       }
+
+      function deletePatientQueue(patientKey) {
+        firebase.database().ref('Hospital/colaPacientes/' + patientKey).remove();
+        vm.growl.success('Paciente Ingresado', vm.config);
+      }
+
+
 
     }
   ]);

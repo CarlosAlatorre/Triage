@@ -58,9 +58,20 @@
               </div>
             </td>
 
+            <td>
+              <i class="zmdi  zmdi-close  zmdi-hc-2x" style="color: #7D1424" ng-click="vm.deletePatientQueue(patient.$key)"></i>
+            </td>
+
           </tr>
           </tbody>
         </table>
+
+        <div style="display: block" align="center" ng-if="vm.objectService.getObjectLength(vm.patientQueue) == 0">
+          <div class="zmdi zmdi-quote m-t-30 not-found-quote">
+          </div>
+          <div class="not-found">No hay</div>
+          <div class="m-b-30 not-found">pacientes en cola</div>
+        </div>
 
       </div>
 
